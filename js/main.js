@@ -50,18 +50,29 @@ mybutton.onclick = function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
+const listItems = document.querySelectorAll('#feature_list li');
 
+    listItems.forEach(item => {
+        item.addEventListener('mouseover', function () {
+            // Remove active class from all items
+            listItems.forEach(li => li.classList.remove('active'));
+            // Add active class to the hovered item
+            item.classList.add('active');
+        });
+
+       
+    });
 
 // swiper parameters
 const swiperParams1 = {
   slidesPerView: 3,
   spaceBetween:1,
-  loop:true,
+//   loop:true,
   navigation:true,
   centeredSlides:true,
   breakpoints: {
     340: {
-      slidesPerView: 1.5,
+      slidesPerView: 1.8,
       spaceBetween:10,
       centeredSlides:true,
     },

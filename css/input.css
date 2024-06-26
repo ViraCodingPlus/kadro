@@ -16,11 +16,11 @@
 }
 @font-face {
     font-family: Kalameh;
-    src: url("../fonts/Kalameh\(FaNum\)-Regular.ttf");
+    src: url("../fonts/KalamehFaNum-Regular.ttf");
   }
   @font-face {
     font-family: KalamehMed;
-    src: url("../fonts/Kalameh\(FaNum\)-Medium.ttf");
+    src: url("../fonts/KalamehFaNum-Medium.ttf");
   }
   @font-face {
     font-family: YekanBakh;
@@ -57,20 +57,8 @@
     opacity: 0.13;
 
   }
-  #main_carousel div{
-   filter:  drop-shadow(0px 84px 115.9px rgba(4, 138, 255, 0.12));
-  }
+ 
 
-  .main_carousel_text{
-    /* Rectangle 34624361 */
-
-    background: #FFFFFF;
-    box-shadow: 19px 42px 71.6px rgba(0, 0, 0, 0.23);
-    backdrop-filter: blur(28.5px);
-    /* Note: backdrop-filter has minimal browser support */
-    border-radius: 18px;
-
-  }
   #section_3_frame{
     background: linear-gradient(92.82deg, rgba(4, 138, 255, 0.06) 2.35%, rgba(51, 2, 153, 0.06) 79.26%);
 
@@ -143,6 +131,10 @@ linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
     opacity: 0.2; /* Adjust the opacity as needed */
     z-index: -1; /* Place the pseudo-element behind the content */
 }
+#main_carousel div{
+  filter:  drop-shadow(0px 84px 115.9px rgba(4, 138, 255, 0.12));
+ }
+
 }
 #mega-menu ul li{
   position: relative;
@@ -165,4 +157,45 @@ linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
 }
 .swiper-button-disabled svg{
   opacity: .15;
+}
+
+.swiper-overflow-container {
+  overflow-x: hidden; /* prevent horizontal scroll */
+}
+
+.swiper-overflow-container .container {
+  overflow: visible; /* if your container has overflow by default */
+}
+
+.swiper-overflow-container .swiper-container {
+  overflow: visible; /* remove swiper container overflow */
+}
+/* Initial inactive state */
+#feature_list.flex-col li {
+    opacity: 0.5;
+}
+
+#feature_list.flex-col li .item {
+    width: 2px;
+    background-color: transparent;
+}
+
+/* Active state */
+#feature_list.flex-col li.active {
+    opacity: 1;
+}
+
+#feature_list.flex-col li.active .item {
+    width: 3px;
+    background-color: #1A93FE; /* Use the actual primary color code */
+}
+
+/* Hover state */
+#feature_list.flex-col li:hover {
+    opacity: 1;
+}
+
+#feature_list.flex-col li:hover .item {
+    width: 3px;
+    background-color: #1A93FE; /* Use the actual primary color code */
 }
