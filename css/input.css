@@ -131,7 +131,7 @@ linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
     opacity: 0.2; /* Adjust the opacity as needed */
     z-index: -1; /* Place the pseudo-element behind the content */
 }
-#main_carousel div{
+#main-shadow{
   filter:  drop-shadow(0px 84px 115.9px rgba(4, 138, 255, 0.12));
  }
 
@@ -198,4 +198,34 @@ linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
 #feature_list.flex-col li:hover .item {
     width: 3px;
     background-color: #1A93FE; /* Use the actual primary color code */
+}
+
+#mega-menu-dropdown::before{
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -20px;
+  width: 144px;
+  height: 20px;
+  background:#F9F9F9BF;
+}
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #000;
+  opacity: 0.55;
+}
+.dot.active {
+  width: 7px;
+  height: 23px;
+  opacity: 1;
+  border-radius: 17px;
+}
+#main_carousel_dots {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 50px;
+  align-items: center;
 }

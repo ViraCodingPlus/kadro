@@ -8,6 +8,7 @@ const swiperEl2 = document.getElementById('swiper-container2');
 const swiperEl3 = document.getElementById('swiper-container3');
 const swiperEl4 = document.getElementById('swiper-container4');
 const swiperEl5 = document.getElementById('swiper-container5');
+const main_carousel_swiper = document.getElementById('main_carousel_swiper');
 
 
 // mega menu element
@@ -20,14 +21,16 @@ const DropdownMenuButton = document.getElementById('dropdown-menu-button');
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {
-    // scrollFunction();
+    scrollFunction();
 };
 MegaMenu.onmouseover=function() {
   MegaMenuButton.style.backgroundColor = '#F9F9F9BF';
+  MegaMenuButton.style.marginTop = '-15px';
   MegaMenuButton.style.boxShadow='0px 65px 120px 0px #0000002E';
 }
 MegaMenu.onmouseleave=function() {
   MegaMenuButton.style.backgroundColor = '';
+  MegaMenuButton.style.marginTop = '';
   MegaMenuButton.style.boxShadow='';
 }
 DropdownMenuButton.onclick=function() {
@@ -36,7 +39,7 @@ DropdownMenuButton.onclick=function() {
 
 }
 function scrollFunction() {
-    if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
+    if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
         mybutton.style.display = "flex";
         chatbutton.style.display = "flex";
     } else {
@@ -239,6 +242,49 @@ const swiperParams4 = {
   },
 };
 
+const swiperParams5 = {
+  slidesPerView: 1,
+  spaceBetween: 0,
+  navigation: {
+    nextEl: '.main-swiper-button-next',
+    prevEl: '.main-swiper-button-prev',
+  },
+  pagination: {
+    el: '#main_carousel_dots',
+    clickable: true,
+    renderBullet: function (index, className) {
+      return `<div class="dot ${className}"></div>`;
+    },
+  },
+  breakpoints: {
+    340: {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      allowTouchMove: true,
+      autoplay: true,
+      direction: 'horizontal',
+    },
+    1250: {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      allowTouchMove: true,
+      direction: 'vertical',
+      navigation:false
+    },
+  },
+  on: {
+    slideChange: function () {
+      const bullets = document.querySelectorAll('#main_carousel_dots .dot');
+      bullets.forEach((bullet, index) => {
+        bullet.classList.remove('active');
+        if (index === this.activeIndex) {
+          bullet.classList.add('active');
+        }
+      });
+    },
+  },
+};
+
 
 // now we need to assign all parameters to Swiper element
 Object.assign(swiperEl, swiperParams1);
@@ -246,6 +292,7 @@ Object.assign(swiperEl2, swiperParams2);
 Object.assign(swiperEl3, swiperParams3);
 Object.assign(swiperEl4, swiperParams3);
 Object.assign(swiperEl5, swiperParams4);
+Object.assign(main_carousel_swiper, swiperParams5);
 
 // and now initialize it
 swiperEl.initialize();
@@ -253,3 +300,5 @@ swiperEl2.initialize();
 swiperEl3.initialize();
 swiperEl4.initialize();
 swiperEl5.initialize();
+main_carousel_swiper.initialize();
+document.querySelector('#main_carousel_dots .dot').classList.add('active');
