@@ -362,8 +362,8 @@
                   id="mega-menu-dropdown-button"
                   data-dropdown-toggle="mega-menu-dropdown"
                   data-dropdown-trigger="hover"
-                  data-dropdown-offset-distance="20" data-dropdown-offset-skidding="-528"
-                  class="flex items-center justify-between w-full py-2 hover:bg-[#F9F9F9BF] hover:rounded-2xl px-1 text-primary text-sm font-bold border-b border-gray-100 hover:-mt-2 hover:border-b-0 md:w-auto p-3 hover:rounded-b-none md:border-0 md:hover:text-blue-600  hover:shadow-[0px_65px_120px_0px_#0000002E] "
+                  data-dropdown-offset-distance="20" data-dropdown-delay="0" data-dropdown-offset-skidding="-528"
+                  class="flex items-center justify-between w-full py-2 hover:bg-[#F9F9F9BF]  hover:rounded-2xl px-1 text-primary text-sm font-bold border-b  border-gray-100 hover:-mt-2 hover:border-b-0 md:w-auto p-3 hover:rounded-b-none md:border-0 md:hover:text-blue-600  hover:shadow-[0px_65px_120px_0px_#0000002E] "
                 >
                   دسته بندی خدمات
                   <svg
@@ -385,7 +385,7 @@
                 </button>
                 <div
                   id="mega-menu-dropdown"
-                  class="absolute z-10 grid hidden relative gap-0 grid-cols-4 text-sm min-w-[1200px] rounded-tr-none shadow-[0px_65px_120px_0px_#0000002E]  bg-[#F9F9F9BF] rounded-[31px]"
+                  class="absolute z-10 grid hidden relative gap-0 grid-cols-4 text-sm min-[1450px]:min-w-[1200px] rounded-tr-none shadow-[0px_65px_120px_0px_#0000002E]  bg-[#F9F9F9BF] rounded-[31px]"
                 >
                 
 
@@ -1097,7 +1097,7 @@
       </li>
     </ul>
     <div class="mx-10">
-      <select id="default-styled-tab" class="xl:hidden flex bg-gray-50 border border-gray-100 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  data-tabs-toggle="#default-styled-tab-content" data-tabs-active-classes="bg-primary data-tabs-inactive-classes="" role="tablist">
+      <select id="default-styled-select" class="xl:hidden flex bg-gray-50 border border-gray-100 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  data-tabs-toggle="#default-styled-tab-content" data-tabs-active-classes="bg-primary data-tabs-inactive-classes="" role="tablist">
         <option value="commercial" id="commercial-styled-tab" data-tabs-target="#styled-commercial"  role="tab" aria-controls="commercial" aria-selected="false">عکاسی اداری و تجاری</option>
         <option value="ceremony" id="ceremony-styled-tab" data-tabs-target="#styled-ceremony"  role="tab" aria-controls="ceremony" aria-selected="false">خدمات مراسم</option>
         <option value="advertising" id="advertising-styled-tab" data-tabs-target="#styled-advertising"  role="tab" aria-controls="advertising" aria-selected="false">عکاسی تبلیغاتی</option>
@@ -2004,417 +2004,528 @@
         <div class="w-full flex justify-center items-center font-Morabba text-[23px]">
           اسنپ <span class="text-primary">عکاسی</span> نیستیم!
         </div>
-        <ul class="gap-2 justify-center xl:flex hidden items-center w-full mt-10">
-          <li class="text-[#323232] text-base py-4 px-4">
-            <a href="#">عکاسی اداری و تجاری</a>
-          </li>
-          <li
-            class="py-2 px-4 text-white dark:text-white hover:bg-primary font-medium text-sm md:px-5 md:py-2.5 dark:hover:bg-gray-700 min-w-32 text-center shadow-[0px_22px_57px_0px_#418CFE2B] bg-primary rounded-[17px] rounded-br-none"
-          >
-             <a href="#">خدمات مراسم</a>
-          </li>
-          <li class="text-[#323232] text-base py-4 px-4">
-            <a href="#">عکاسی تبلیغاتی</a>
-          </li>
-          <li class="text-[#323232] text-base py-4 px-4">
-            <a href="#">عکاسی پرتره</a>
-          </li>
-          <li class="text-[#323232] text-base py-4 px-4">
-            <a href="#">عکاسی خانوادگی</a>
-          </li>
-        </ul>
-        <div class="mx-10">
-          <select id="photography-services" class="xl:hidden flex mt-5 bg-gray-50 border border-gray-100 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-            <option value="commercial">عکاسی اداری و تجاری</option>
-            <option value="ceremony">خدمات مراسم</option>
-            <option value="advertising">عکاسی تبلیغاتی</option>
-            <option value="portrait">عکاسی پرتره</option>
-            <option value="family">عکاسی خانوادگی</option>
-          </select>
-        </div>
-        <div class="max-w-screen-xl mx-auto mt-10">
+          <ul class="gap-4 xl:flex hidden justify-center items-center flex-wrap w-full" id="default-styled-tab2" data-tabs-toggle="#default-styled-tab-content2" data-tabs-active-classes="py-2 px-4 text-white dark:text-white hover:bg-primary font-medium text-sm md:px-5 md:py-2.5 dark:hover:bg-gray-700 min-w-32 text-center shadow-[0px_22px_57px_0px_#418CFE2B] bg-primary rounded-[17px] rounded-br-none" data-tabs-inactive-classes="text-[#323232] text-base py-4 px-4" role="tablist">
+      <li class="" role="presentation">
+        <button id="commercial-styled-tab2" data-tabs-target="#styled-commercial2" type="button" role="tab" aria-controls="commercial2" aria-selected="false">عکاسی اداری و تجاری</button>
+      </li>
+      <li
+        class=""
+      >
+         <button id="ceremony-styled-tab2" data-tabs-target="#styled-ceremony2" type="button" role="tab" aria-controls="ceremony2" aria-selected="false">خدمات مراسم</button>
+      </li>
+      <li class="" role="presentation">
+         <button id="advertising-styled-tab2" data-tabs-target="#styled-advertising2" type="button" role="tab" aria-controls="advertising2" aria-selected="false">عکاسی تبلیغاتی</button>
+      
+      </li>
+      <li class="" role="presentation">
+         <button id="portrait-styled-tab2" data-tabs-target="#styled-portrait2" type="button" role="tab" aria-controls="portrait2" aria-selected="false">عکاسی پرتره</button>
+       
+      </li>
+      <li class="" role="presentation">
+        <button id="family-styled-tab2" data-tabs-target="#styled-family2" type="button" role="tab" aria-controls="family2" aria-selected="false">عکاسی خانوادگی</button>
+       
+      </li>
+    </ul>
+    <div class="mx-10 mt-5 xl:mt-0">
+      <select id="default-styled-select2" class="xl:hidden flex bg-gray-50 border border-gray-100 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  data-tabs-toggle="#default-styled-tab-content2" data-tabs-active-classes="bg-primary" data-tabs-inactive-classes="" role="tablist">
+        <option value="commercial2" id="commercial-styled-tab2" data-tabs-target="#styled-commercial2"  role="tab" aria-controls="commercial2" aria-selected="false">عکاسی اداری و تجاری</option>
+        <option value="ceremony2" id="ceremony-styled-tab2" data-tabs-target="#styled-ceremony2"  role="tab" aria-controls="ceremony2" aria-selected="false">خدمات مراسم</option>
+        <option value="advertising2" id="advertising-styled-tab2" data-tabs-target="#styled-advertising2"  role="tab" aria-controls="advertising2" aria-selected="false">عکاسی تبلیغاتی</option>
+        <option value="portrait2" id="portrait-styled-tab2" data-tabs-target="#styled-portrait2"  role="tab" aria-controls="portrait2" aria-selected="false">عکاسی پرتره</option>
+        <option value="family2" id="family-styled-tab2" data-tabs-target="#styled-family2"  role="tab" aria-controls="family2" aria-selected="false">عکاسی خانوادگی</option>
+      </select>
+    </div>
+    <div class="max-w-screen-xl mx-auto mt-10">
+      <div id="default-styled-tab-content2">
+        <div class="hidden" id="styled-commercial2" role="tabpanel" aria-labelledby="commercial-tab2">
           <swiper-container  id="swiper-container3" class="mySwiper" slides-per-view="1.2" space-between="10" centered-slides="true" loop="true"  pagination="false" init="false"  
-            >
-                    <swiper-slide class="bg-transparent">  
+          >
+                  <swiper-slide class="bg-transparent">  
 
+                    
+                  <div class="h-full">
+                    <div class="max-w-sm bg-white border p-2 border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                       
-                    <div class="h-full">
-                      <div class="max-w-sm bg-white border p-2 border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                        
 
 
-                        <div id="custom-controls-gallery" class="relative w-full" data-carousel="static">
-                          <!-- Carousel wrapper -->
-                          <div class="relative h-56 overflow-hidden rounded-lg md:h-56">
-                              <!-- Item 1 -->
-                              <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-                                <div class="flex flex-col gap-4">
-                                  <div class="flex gap-4">
-                                      <div>
-                                          <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
-                                      </div>
-                                      <div>
-                                          <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
-                                      </div>
-                                    
-                                  </div>
-                                  <div class="flex gap-4">
-                                      <div>
-                                          <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
-                                      </div>
-                                      <div>
-                                          <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
-                                      </div>
-                                      <div>
-                                          <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
-                                      </div>
-                                    
-                                  </div>
+                      <div id="custom-controls-gallery" class="relative w-full" data-carousel="static">
+                        <!-- Carousel wrapper -->
+                        <div class="relative h-56 overflow-hidden rounded-lg md:h-56">
+                            <!-- Item 1 -->
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                              <div class="flex flex-col gap-4">
+                                <div class="flex gap-4">
+                                    <div>
+                                        <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
+                                    </div>
+                                    <div>
+                                        <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
+                                    </div>
                                   
-                                
                                 </div>
-                              </div>
-                              <!-- Item 2 -->
-                              <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                                <div class="flex flex-col gap-4">
-                                  <div class="flex gap-4">
-                                      <div>
-                                          <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
-                                      </div>
-                                      <div>
-                                          <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
-                                      </div>
-                                    
-                                  </div>
-                                  <div class="flex gap-4">
-                                      <div>
-                                          <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
-                                      </div>
-                                      <div>
-                                          <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
-                                      </div>
-                                      <div>
-                                          <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
-                                      </div>
-                                    
-                                  </div>
+                                <div class="flex gap-4">
+                                    <div>
+                                        <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
+                                    </div>
+                                    <div>
+                                        <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
+                                    </div>
+                                    <div>
+                                        <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
+                                    </div>
                                   
-                                
                                 </div>
+                                
+                              
                               </div>
-                          </div>
-                        
-                          <div class="flex justify-center items-center pt-4">
-                              <button type="button" class="flex justify-center items-center h-full cursor-pointer group focus:outline-none" data-carousel-prev>
-                                  <span class="text-primary hover:text-blue-600 group-focus:text-blue-600 ">
-                                      <svg class="rtl:rotate-180 w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5H1m0 0 4 4M1 5l4-4"/>
-                                      </svg>
-                                      <span class="sr-only">Previous</span>
-                                  </span>
-                              </button>
-                              <!-- Slider indicators -->
-                          <div class=" flex space-x-1 rtl:space-x-reverse mx-2">
-                            <button type="button" class="w-2 h-2 rounded-full" style="background: #7D7D7D ;" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-                            <button type="button" class="w-2 h-2 rounded-full" style="background: #7D7D7D;"  aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-                          
-                        </div>
-                              <button type="button" class="flex justify-center items-center h-full cursor-pointer group focus:outline-none" data-carousel-next>
-                                  <span class="text-primary hover:text-blue-600 group-focus:text-blue-600 ">
-                                      <svg class="rtl:rotate-180 w-3 h-3 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                                      </svg>
-                                      <span class="sr-only">Next</span>
-                                  </span>
-                              </button>
-                          </div>
-                      </div>
-                        <div class="p-2 pt-5 mt-5 border-t justify-between flex gap-2 items-center border-gray-200 mx-3">
-                        <div class="flex items-center gap-2">
-                            <div id="card_thumb" class="relative">
-                              <img
-                                src="./img/8eb889e37a32d17fcdd5a9ddb531bdf3.png"
-                                class="border-4 border-[#FF9900] rounded-full h-20 w-20"
-                                alt=""
-                              />
-                            
                             </div>
-                            <div class="flex flex-col justify-center">
-                              <div class=" font-bold text-lg">خانم حکیم زاده</div>
-                              <div class="mb-2 text-[#888ABD]">تهران، محدوده ازگل</div>
-                              <div class="flex gap-2">
-                                <div class="bg-[#FF9900] opacity-50 w-5 h-5 rounded-full"></div>
-                                <div class="text-xs text-[#FF9900]">فوق حرفه ای پرو</div>
+                            <!-- Item 2 -->
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                              <div class="flex flex-col gap-4">
+                                <div class="flex gap-4">
+                                    <div>
+                                        <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
+                                    </div>
+                                    <div>
+                                        <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
+                                    </div>
+                                  
+                                </div>
+                                <div class="flex gap-4">
+                                    <div>
+                                        <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
+                                    </div>
+                                    <div>
+                                        <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
+                                    </div>
+                                    <div>
+                                        <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
+                                    </div>
+                                  
+                                </div>
+                                
+                              
                               </div>
                             </div>
                         </div>
-                          <a href="#" id="section_3_frame" class="flex justify-center h-14 w-14 items-center bg-primary rounded-2xl">
-                            <span class="text-primary hover:text-blue-600 group-focus:text-blue-600 ">
-                              <svg class="rtl:rotate-180 w-3 h-3 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                              </svg>
-                              <span class="sr-only">Next</span>
-                          </span>
-                          </a>
-                        </div>
-                      </div>
-
-                    </div>
-                    </swiper-slide>
-                    <swiper-slide class="bg-transparent">  
-
                       
-                    <div class="h-full">
-                      <div class="max-w-sm bg-white border p-2 border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                        <div class="flex justify-center items-center pt-4">
+                            <button type="button" class="flex justify-center items-center h-full cursor-pointer group focus:outline-none" data-carousel-prev>
+                                <span class="text-primary hover:text-blue-600 group-focus:text-blue-600 ">
+                                    <svg class="rtl:rotate-180 w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5H1m0 0 4 4M1 5l4-4"/>
+                                    </svg>
+                                    <span class="sr-only">Previous</span>
+                                </span>
+                            </button>
+                            <!-- Slider indicators -->
+                        <div class=" flex space-x-1 rtl:space-x-reverse mx-2">
+                          <button type="button" class="w-2 h-2 rounded-full" style="background: #7D7D7D ;" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                          <button type="button" class="w-2 h-2 rounded-full" style="background: #7D7D7D;"  aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
                         
-
-
-                        <div id="custom-controls-gallery" class="relative w-full" data-carousel="static">
-                          <!-- Carousel wrapper -->
-                          <div class="relative h-56 overflow-hidden rounded-lg md:h-56">
-                              <!-- Item 1 -->
-                              <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-                                <div class="flex flex-col gap-4">
-                                  <div class="flex gap-4">
-                                      <div>
-                                          <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
-                                      </div>
-                                      <div>
-                                          <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
-                                      </div>
-                                    
-                                  </div>
-                                  <div class="flex gap-4">
-                                      <div>
-                                          <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
-                                      </div>
-                                      <div>
-                                          <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
-                                      </div>
-                                      <div>
-                                          <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
-                                      </div>
-                                    
-                                  </div>
-                                  
-                                
-                                </div>
-                              </div>
-                              <!-- Item 2 -->
-                              <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                                <div class="flex flex-col gap-4">
-                                  <div class="flex gap-4">
-                                      <div>
-                                          <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
-                                      </div>
-                                      <div>
-                                          <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
-                                      </div>
-                                    
-                                  </div>
-                                  <div class="flex gap-4">
-                                      <div>
-                                          <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
-                                      </div>
-                                      <div>
-                                          <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
-                                      </div>
-                                      <div>
-                                          <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
-                                      </div>
-                                    
-                                  </div>
-                                  
-                                
-                                </div>
-                              </div>
-                          </div>
-                        
-                          <div class="flex justify-center items-center pt-4">
-                              <button type="button" class="flex justify-center items-center h-full cursor-pointer group focus:outline-none" data-carousel-prev>
-                                  <span class="text-primary hover:text-blue-600 group-focus:text-blue-600 ">
-                                      <svg class="rtl:rotate-180 w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5H1m0 0 4 4M1 5l4-4"/>
-                                      </svg>
-                                      <span class="sr-only">Previous</span>
-                                  </span>
-                              </button>
-                              <!-- Slider indicators -->
-                          <div class=" flex space-x-1 rtl:space-x-reverse mx-2">
-                            <button type="button" class="w-2 h-2 rounded-full" style="background: #7D7D7D ;" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-                            <button type="button" class="w-2 h-2 rounded-full" style="background: #7D7D7D;"  aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-                          
-                        </div>
-                              <button type="button" class="flex justify-center items-center h-full cursor-pointer group focus:outline-none" data-carousel-next>
-                                  <span class="text-primary hover:text-blue-600 group-focus:text-blue-600 ">
-                                      <svg class="rtl:rotate-180 w-3 h-3 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                                      </svg>
-                                      <span class="sr-only">Next</span>
-                                  </span>
-                              </button>
-                          </div>
                       </div>
-                        <div class="p-2 pt-5 mt-5 border-t justify-between flex gap-2 items-center border-gray-200 mx-3">
-                        <div class="flex items-center gap-2">
-                            <div id="card_thumb" class="relative">
-                              <img
-                                src="./img/8eb889e37a32d17fcdd5a9ddb531bdf3.png"
-                                class="border-4 border-[#FF9900] rounded-full h-20 w-20"
-                                alt=""
-                              />
-                            
-                            </div>
-                            <div class="flex flex-col justify-center">
-                              <div class=" font-bold text-lg">خانم حکیم زاده</div>
-                              <div class="mb-2 text-[#888ABD]">تهران، محدوده ازگل</div>
-                              <div class="flex gap-2">
-                                <div class="bg-[#FF9900] opacity-50 w-5 h-5 rounded-full"></div>
-                                <div class="text-xs text-[#FF9900]">فوق حرفه ای پرو</div>
-                              </div>
-                            </div>
+                            <button type="button" class="flex justify-center items-center h-full cursor-pointer group focus:outline-none" data-carousel-next>
+                                <span class="text-primary hover:text-blue-600 group-focus:text-blue-600 ">
+                                    <svg class="rtl:rotate-180 w-3 h-3 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                                    </svg>
+                                    <span class="sr-only">Next</span>
+                                </span>
+                            </button>
                         </div>
-                          <a href="#" id="section_3_frame" class="flex justify-center h-14 w-14 items-center bg-primary rounded-2xl">
-                            <span class="text-primary hover:text-blue-600 group-focus:text-blue-600 ">
-                              <svg class="rtl:rotate-180 w-3 h-3 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                              </svg>
-                              <span class="sr-only">Next</span>
-                          </span>
-                          </a>
-                        </div>
-                      </div>
-
                     </div>
-                    </swiper-slide>
-                    <swiper-slide class="bg-transparent">  
+                      <div class="p-2 pt-5 mt-5 border-t justify-between flex gap-2 items-center border-gray-200 mx-3">
+                      <div class="flex items-center gap-2">
+                          <div id="card_thumb" class="relative">
+                            <img
+                              src="./img/8eb889e37a32d17fcdd5a9ddb531bdf3.png"
+                              class="border-4 border-[#FF9900] rounded-full h-20 w-20"
+                              alt=""
+                            />
+                          
+                          </div>
+                          <div class="flex flex-col justify-center">
+                            <div class=" font-bold text-lg">خانم حکیم زاده</div>
+                            <div class="mb-2 text-[#888ABD]">تهران، محدوده ازگل</div>
+                            <div class="flex gap-2">
+                              <div class="bg-[#FF9900] opacity-50 w-5 h-5 rounded-full"></div>
+                              <div class="text-xs text-[#FF9900]">فوق حرفه ای پرو</div>
+                            </div>
+                          </div>
+                      </div>
+                        <a href="#" id="section_3_frame" class="flex justify-center h-14 w-14 items-center bg-primary rounded-2xl">
+                          <span class="text-primary hover:text-blue-600 group-focus:text-blue-600 ">
+                            <svg class="rtl:rotate-180 w-3 h-3 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                            </svg>
+                            <span class="sr-only">Next</span>
+                        </span>
+                        </a>
+                      </div>
+                    </div>
 
+                  </div>
+                  </swiper-slide>
+                  <swiper-slide class="bg-transparent">  
+
+                    
+                  <div class="h-full">
+                    <div class="max-w-sm bg-white border p-2 border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                       
-                    <div class="h-full">
-                      <div class="max-w-sm bg-white border p-2 border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                        
 
 
-                        <div id="custom-controls-gallery" class="relative w-full" data-carousel="static">
-                          <!-- Carousel wrapper -->
-                          <div class="relative h-56 overflow-hidden rounded-lg md:h-56">
-                              <!-- Item 1 -->
-                              <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-                                <div class="flex flex-col gap-4">
-                                  <div class="flex gap-4">
-                                      <div>
-                                          <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
-                                      </div>
-                                      <div>
-                                          <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
-                                      </div>
-                                    
-                                  </div>
-                                  <div class="flex gap-4">
-                                      <div>
-                                          <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
-                                      </div>
-                                      <div>
-                                          <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
-                                      </div>
-                                      <div>
-                                          <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
-                                      </div>
-                                    
-                                  </div>
+                      <div id="custom-controls-gallery" class="relative w-full" data-carousel="static">
+                        <!-- Carousel wrapper -->
+                        <div class="relative h-56 overflow-hidden rounded-lg md:h-56">
+                            <!-- Item 1 -->
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                              <div class="flex flex-col gap-4">
+                                <div class="flex gap-4">
+                                    <div>
+                                        <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
+                                    </div>
+                                    <div>
+                                        <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
+                                    </div>
                                   
-                                
                                 </div>
-                              </div>
-                              <!-- Item 2 -->
-                              <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                                <div class="flex flex-col gap-4">
-                                  <div class="flex gap-4">
-                                      <div>
-                                          <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
-                                      </div>
-                                      <div>
-                                          <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
-                                      </div>
-                                    
-                                  </div>
-                                  <div class="flex gap-4">
-                                      <div>
-                                          <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
-                                      </div>
-                                      <div>
-                                          <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
-                                      </div>
-                                      <div>
-                                          <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
-                                      </div>
-                                    
-                                  </div>
+                                <div class="flex gap-4">
+                                    <div>
+                                        <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
+                                    </div>
+                                    <div>
+                                        <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
+                                    </div>
+                                    <div>
+                                        <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
+                                    </div>
                                   
-                                
                                 </div>
+                                
+                              
                               </div>
-                          </div>
-                        
-                          <div class="flex justify-center items-center pt-4">
-                              <button type="button" class="flex justify-center items-center h-full cursor-pointer group focus:outline-none" data-carousel-prev>
-                                  <span class="text-primary hover:text-blue-600 group-focus:text-blue-600 ">
-                                      <svg class="rtl:rotate-180 w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5H1m0 0 4 4M1 5l4-4"/>
-                                      </svg>
-                                      <span class="sr-only">Previous</span>
-                                  </span>
-                              </button>
-                              <!-- Slider indicators -->
-                          <div class=" flex space-x-1 rtl:space-x-reverse mx-2">
-                            <button type="button" class="w-2 h-2 rounded-full" style="background: #7D7D7D ;" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-                            <button type="button" class="w-2 h-2 rounded-full" style="background: #7D7D7D;"  aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-                          
-                        </div>
-                              <button type="button" class="flex justify-center items-center h-full cursor-pointer group focus:outline-none" data-carousel-next>
-                                  <span class="text-primary hover:text-blue-600 group-focus:text-blue-600 ">
-                                      <svg class="rtl:rotate-180 w-3 h-3 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                                      </svg>
-                                      <span class="sr-only">Next</span>
-                                  </span>
-                              </button>
-                          </div>
-                      </div>
-                        <div class="p-2 pt-5 mt-5 border-t justify-between flex gap-2 items-center border-gray-200 mx-3">
-                        <div class="flex items-center gap-2">
-                            <div id="card_thumb" class="relative">
-                              <img
-                                src="./img/8eb889e37a32d17fcdd5a9ddb531bdf3.png"
-                                class="border-4 border-[#FF9900] rounded-full h-20 w-20"
-                                alt=""
-                              />
-                            
                             </div>
-                            <div class="flex flex-col justify-center">
-                              <div class=" font-bold text-lg">خانم حکیم زاده</div>
-                              <div class="mb-2 text-[#888ABD]">تهران، محدوده ازگل</div>
-                              <div class="flex gap-2">
-                                <div class="bg-[#FF9900] opacity-50 w-5 h-5 rounded-full"></div>
-                                <div class="text-xs text-[#FF9900]">فوق حرفه ای پرو</div>
+                            <!-- Item 2 -->
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                              <div class="flex flex-col gap-4">
+                                <div class="flex gap-4">
+                                    <div>
+                                        <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
+                                    </div>
+                                    <div>
+                                        <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
+                                    </div>
+                                  
+                                </div>
+                                <div class="flex gap-4">
+                                    <div>
+                                        <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
+                                    </div>
+                                    <div>
+                                        <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
+                                    </div>
+                                    <div>
+                                        <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
+                                    </div>
+                                  
+                                </div>
+                                
+                              
                               </div>
                             </div>
                         </div>
-                          <a href="#" id="section_3_frame" class="flex justify-center h-14 w-14 items-center bg-primary rounded-2xl">
-                            <span class="text-primary hover:text-blue-600 group-focus:text-blue-600 ">
-                              <svg class="rtl:rotate-180 w-3 h-3 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                              </svg>
-                              <span class="sr-only">Next</span>
-                          </span>
-                          </a>
-                        </div>
+                      
+                        <div class="flex justify-center items-center pt-4">
+                            <button type="button" class="flex justify-center items-center h-full cursor-pointer group focus:outline-none" data-carousel-prev>
+                                <span class="text-primary hover:text-blue-600 group-focus:text-blue-600 ">
+                                    <svg class="rtl:rotate-180 w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5H1m0 0 4 4M1 5l4-4"/>
+                                    </svg>
+                                    <span class="sr-only">Previous</span>
+                                </span>
+                            </button>
+                            <!-- Slider indicators -->
+                        <div class=" flex space-x-1 rtl:space-x-reverse mx-2">
+                          <button type="button" class="w-2 h-2 rounded-full" style="background: #7D7D7D ;" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                          <button type="button" class="w-2 h-2 rounded-full" style="background: #7D7D7D;"  aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                        
                       </div>
-
+                            <button type="button" class="flex justify-center items-center h-full cursor-pointer group focus:outline-none" data-carousel-next>
+                                <span class="text-primary hover:text-blue-600 group-focus:text-blue-600 ">
+                                    <svg class="rtl:rotate-180 w-3 h-3 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                                    </svg>
+                                    <span class="sr-only">Next</span>
+                                </span>
+                            </button>
+                        </div>
                     </div>
-                    </swiper-slide>
-            </swiper-container>
+                      <div class="p-2 pt-5 mt-5 border-t justify-between flex gap-2 items-center border-gray-200 mx-3">
+                      <div class="flex items-center gap-2">
+                          <div id="card_thumb" class="relative">
+                            <img
+                              src="./img/8eb889e37a32d17fcdd5a9ddb531bdf3.png"
+                              class="border-4 border-[#FF9900] rounded-full h-20 w-20"
+                              alt=""
+                            />
+                          
+                          </div>
+                          <div class="flex flex-col justify-center">
+                            <div class=" font-bold text-lg">خانم حکیم زاده</div>
+                            <div class="mb-2 text-[#888ABD]">تهران، محدوده ازگل</div>
+                            <div class="flex gap-2">
+                              <div class="bg-[#FF9900] opacity-50 w-5 h-5 rounded-full"></div>
+                              <div class="text-xs text-[#FF9900]">فوق حرفه ای پرو</div>
+                            </div>
+                          </div>
+                      </div>
+                        <a href="#" id="section_3_frame" class="flex justify-center h-14 w-14 items-center bg-primary rounded-2xl">
+                          <span class="text-primary hover:text-blue-600 group-focus:text-blue-600 ">
+                            <svg class="rtl:rotate-180 w-3 h-3 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                            </svg>
+                            <span class="sr-only">Next</span>
+                        </span>
+                        </a>
+                      </div>
+                    </div>
+
+                  </div>
+                  </swiper-slide>
+                  <swiper-slide class="bg-transparent">  
+
+                    
+                  <div class="h-full">
+                    <div class="max-w-sm bg-white border p-2 border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                      
+
+
+                      <div id="custom-controls-gallery" class="relative w-full" data-carousel="static">
+                        <!-- Carousel wrapper -->
+                        <div class="relative h-56 overflow-hidden rounded-lg md:h-56">
+                            <!-- Item 1 -->
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                              <div class="flex flex-col gap-4">
+                                <div class="flex gap-4">
+                                    <div>
+                                        <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
+                                    </div>
+                                    <div>
+                                        <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
+                                    </div>
+                                  
+                                </div>
+                                <div class="flex gap-4">
+                                    <div>
+                                        <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
+                                    </div>
+                                    <div>
+                                        <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
+                                    </div>
+                                    <div>
+                                        <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
+                                    </div>
+                                  
+                                </div>
+                                
+                              
+                              </div>
+                            </div>
+                            <!-- Item 2 -->
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                              <div class="flex flex-col gap-4">
+                                <div class="flex gap-4">
+                                    <div>
+                                        <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
+                                    </div>
+                                    <div>
+                                        <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
+                                    </div>
+                                  
+                                </div>
+                                <div class="flex gap-4">
+                                    <div>
+                                        <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
+                                    </div>
+                                    <div>
+                                        <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
+                                    </div>
+                                    <div>
+                                        <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
+                                    </div>
+                                  
+                                </div>
+                                
+                              
+                              </div>
+                            </div>
+                        </div>
+                      
+                        <div class="flex justify-center items-center pt-4">
+                            <button type="button" class="flex justify-center items-center h-full cursor-pointer group focus:outline-none" data-carousel-prev>
+                                <span class="text-primary hover:text-blue-600 group-focus:text-blue-600 ">
+                                    <svg class="rtl:rotate-180 w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5H1m0 0 4 4M1 5l4-4"/>
+                                    </svg>
+                                    <span class="sr-only">Previous</span>
+                                </span>
+                            </button>
+                            <!-- Slider indicators -->
+                        <div class=" flex space-x-1 rtl:space-x-reverse mx-2">
+                          <button type="button" class="w-2 h-2 rounded-full" style="background: #7D7D7D ;" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                          <button type="button" class="w-2 h-2 rounded-full" style="background: #7D7D7D;"  aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                        
+                      </div>
+                            <button type="button" class="flex justify-center items-center h-full cursor-pointer group focus:outline-none" data-carousel-next>
+                                <span class="text-primary hover:text-blue-600 group-focus:text-blue-600 ">
+                                    <svg class="rtl:rotate-180 w-3 h-3 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                                    </svg>
+                                    <span class="sr-only">Next</span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                      <div class="p-2 pt-5 mt-5 border-t justify-between flex gap-2 items-center border-gray-200 mx-3">
+                      <div class="flex items-center gap-2">
+                          <div id="card_thumb" class="relative">
+                            <img
+                              src="./img/8eb889e37a32d17fcdd5a9ddb531bdf3.png"
+                              class="border-4 border-[#FF9900] rounded-full h-20 w-20"
+                              alt=""
+                            />
+                          
+                          </div>
+                          <div class="flex flex-col justify-center">
+                            <div class=" font-bold text-lg">خانم حکیم زاده</div>
+                            <div class="mb-2 text-[#888ABD]">تهران، محدوده ازگل</div>
+                            <div class="flex gap-2">
+                              <div class="bg-[#FF9900] opacity-50 w-5 h-5 rounded-full"></div>
+                              <div class="text-xs text-[#FF9900]">فوق حرفه ای پرو</div>
+                            </div>
+                          </div>
+                      </div>
+                        <a href="#" id="section_3_frame" class="flex justify-center h-14 w-14 items-center bg-primary rounded-2xl">
+                          <span class="text-primary hover:text-blue-600 group-focus:text-blue-600 ">
+                            <svg class="rtl:rotate-180 w-3 h-3 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                            </svg>
+                            <span class="sr-only">Next</span>
+                        </span>
+                        </a>
+                      </div>
+                    </div>
+
+                  </div>
+                  </swiper-slide>
+          </swiper-container>
+      </div>
+      <div class="hidden" id="styled-ceremony2" role="tabpanel" aria-labelledby="ceremony-tab2">
+        <div class="grid grid-cols-1 xl:grid-cols-3 md:grid-cols-2 gap-6 mx-2 xl:mx-0">
+          <div class="grid xl:gap-1 gap-3 h-full">
+            <div class="relative h-fit">
+              <img
+                class="h-auto max-w-full rounded-3xl"
+                src="./img/77f73d8c2dd25a5b40d9f43b03e1129f.jfif"
+                alt=""
+              />
+              <div
+                class="absolute inset-0 rounded-3xl gallery_shadow"
+              ></div>
+              <div class="absolute xl:bottom-16 bottom-8 left-0 right-10">
+                <div class="text-white font-bold text-xl mr-2">
+                  عکـــاسی پرتره
+                </div>
+                <div class="flex justify-between mt-5 items-center">
+                  <div class="flex gap-2 items-center">
+                    <div class="bg-primary rotate-45 w-2 h-2">
+                      <svg
+                        width="8"
+                        height="8"
+                        viewBox="0 0 8 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <rect
+                          x="-0.242676"
+                          y="4"
+                          width="6"
+                          height="6"
+                          rx="2"
+                          transform="rotate(-45 -0.242676 4)"
+                          fill="#0986FD"
+                        />
+                      </svg>
+                    </div>
+                    <div class="text-base text-white">شروع قیمت از :</div>
+                  </div>
+                  <div class="flex gap-2 ml-5">
+                    <div class="text-[#64BE0A]">750.000</div>
+                    <div class="text-white">تومان</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="relative h-fit">
+              <img
+                class="h-auto max-w-full rounded-3xl"
+                src="./img/918a8a0607c123fd6d019ca929a8436e.jfif"
+                alt=""
+              />
+              <div
+                class="absolute inset-0 rounded-3xl gallery_shadow"
+              ></div>
+              <div class="absolute xl:bottom-16 bottom-8 left-0 right-10">
+                <div class="text-white font-bold text-xl mr-2">
+                  عکـــاسی پرتره
+                </div>
+                <div class="flex justify-between mt-5 items-center">
+                  <div class="flex gap-2 items-center">
+                    <div class="bg-primary rotate-45 w-2 h-2">
+                      <svg
+                        width="8"
+                        height="8"
+                        viewBox="0 0 8 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <rect
+                          x="-0.242676"
+                          y="4"
+                          width="6"
+                          height="6"
+                          rx="2"
+                          transform="rotate(-45 -0.242676 4)"
+                          fill="#0986FD"
+                        />
+                      </svg>
+                    </div>
+                    <div class="text-base text-white">شروع قیمت از :</div>
+                  </div>
+                  <div class="flex gap-2 ml-5">
+                    <div class="text-[#64BE0A]">750.000</div>
+                    <div class="text-white">تومان</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+         
         </div>
+      </div>
+      <div class="hidden" id="styled-advertising2" role="tabpanel" aria-labelledby="advertising-tab2">
+       
+      </div>
+      <div class="hidden" id="styled-portrait2" role="tabpanel" aria-labelledby="portrait-tab2">
+        portrait
+      </div>
+      <div class="hidden" id="styled-family2" role="tabpanel" aria-labelledby="family-tab2">
+        family
+      </div>
+       
+      </div>
+    </div>
       
     </section>
     <!-- End Section 7 -->

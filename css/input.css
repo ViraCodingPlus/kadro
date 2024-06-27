@@ -199,16 +199,31 @@ linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
     width: 3px;
     background-color: #1A93FE; /* Use the actual primary color code */
 }
-
-#mega-menu-dropdown::before{
+#mega-menu-dropdown:before {
+  content: "";
+  position: absolute;
+  /* left: 221px; */
+  top: -39px;
+  height: 49px;
+  width: 44px;
+  background: #0000;
+  right: 136px;
+  z-index: 10;
+  border: 9px solid rgba(249, 249, 249,0.8);
+  border-top: 0;
+  border-left: 0;
+  border-radius: 0 0 24px 0;
+}
+#mega-menu-dropdown:after {
   content: "";
   position: absolute;
   right: 0;
   top: -20px;
-  width: 144px;
+  width: 139px;
   height: 20px;
-  background:#F9F9F9BF;
+  background: #f9f9f9bf;
 }
+
 .dot {
   width: 7px;
   height: 7px;

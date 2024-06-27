@@ -25,12 +25,14 @@ window.onscroll = function() {
 };
 MegaMenu.onmouseover=function() {
   MegaMenuButton.style.backgroundColor = '#F9F9F9BF';
-  MegaMenuButton.style.marginTop = '-15px';
+  MegaMenuButton.style.marginTop = '-8px';
+  MegaMenuButton.style.borderRadius = '16px 16px 0 0';
   MegaMenuButton.style.boxShadow='0px 65px 120px 0px #0000002E';
 }
 MegaMenu.onmouseleave=function() {
   MegaMenuButton.style.backgroundColor = '';
   MegaMenuButton.style.marginTop = '';
+  MegaMenuButton.style.borderRadius = '';
   MegaMenuButton.style.boxShadow='';
 }
 DropdownMenuButton.onclick=function() {
@@ -65,6 +67,32 @@ const listItems = document.querySelectorAll('#feature_list li');
 
        
     });
+
+document.getElementById('default-styled-select').addEventListener('change', function (e) {
+  const targetId = e.target.selectedOptions[0].getAttribute('data-tabs-target');
+  const tabContents = document.querySelectorAll('#default-styled-tab-content > div');
+
+  tabContents.forEach(content => {
+      if (content.id === targetId.substring(1)) {
+          content.classList.remove('hidden');
+      } else {
+          content.classList.add('hidden');
+      }
+  });
+});
+
+document.getElementById('default-styled-select2').addEventListener('change', function (e) {
+  const targetId = e.target.selectedOptions[0].getAttribute('data-tabs-target');
+  const tabContents = document.querySelectorAll('#default-styled-tab-content2 > div');
+
+  tabContents.forEach(content => {
+      if (content.id === targetId.substring(1)) {
+          content.classList.remove('hidden');
+      } else {
+          content.classList.add('hidden');
+      }
+  });
+});
 
 // swiper parameters
 const swiperParams1 = {
