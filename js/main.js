@@ -10,6 +10,7 @@ const swiperEl3 = document.getElementById('swiper-container3');
 const swiperEl4 = document.getElementById('swiper-container4');
 const swiperEl5 = document.getElementById('swiper-container5');
 const main_carousel_swiper = document.getElementById('main_carousel_swiper');
+const feature_list_items = document.getElementById('feature_list_items');
 
 
 // mega menu element
@@ -347,6 +348,29 @@ const swiperParams5 = {
     },
   },
 };
+const swiperParams6 = {
+  slidesPerView: 1,
+  spaceBetween: 0,
+  navigation: false,
+  pagination: false,
+  breakpoints: {
+    340: {
+      slidesPerView: 1.4,
+      spaceBetween: 15,
+      allowTouchMove: true,
+    },
+    1050: {
+      slidesPerView: 1,
+      spaceBetween: 0,
+    },
+  },
+  on: {
+    init() {
+      // Example: Set the active slide to the second slide (index 1) after initialization
+      this.slideTo(1, 0); // (slide index, transition speed in ms)
+    },
+  },
+};
 
 
 // now we need to assign all parameters to Swiper element
@@ -356,6 +380,7 @@ Object.assign(swiperEl3, swiperParams3);
 Object.assign(swiperEl4, swiperParams3);
 Object.assign(swiperEl5, swiperParams4);
 Object.assign(main_carousel_swiper, swiperParams5);
+Object.assign(feature_list_items, swiperParams6);
 
 // and now initialize it
 swiperEl.initialize();
@@ -364,4 +389,5 @@ swiperEl3.initialize();
 swiperEl4.initialize();
 swiperEl5.initialize();
 main_carousel_swiper.initialize();
+feature_list_items.initialize();
 document.querySelector('#main_carousel_dots .dot').classList.add('active');
