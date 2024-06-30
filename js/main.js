@@ -1,3 +1,4 @@
+var hideTimeout;
 // Get the button
 var mybutton = document.getElementById("back-to-top");
 var chatbutton = document.getElementById("chat-button");
@@ -19,6 +20,7 @@ const MegaMenuButton = document.getElementById('mega-menu-dropdown-button');
 // dropdown mobile menu element
 const DropdownMenuButton = document.getElementById('dropdown-menu-button');
 
+
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {
     scrollFunction();
@@ -29,12 +31,45 @@ MegaMenu.onmouseover=function() {
   MegaMenuButton.style.borderRadius = '16px 16px 0 0';
   MegaMenuButton.style.boxShadow='0px 65px 120px 0px #0000002E';
 }
-MegaMenu.onmouseleave=function() {
+
+function showMenu() {
+
+  clearTimeout(hideTimeout);
+  var rect = MegaMenuButton.getBoundingClientRect();
+  MegaMenu.classList.add('grid');
+  MegaMenu.classList.remove('hidden');
+  MegaMenu.style.width = rect.left + 100 + 'px';
+  MegaMenuButton.style.backgroundColor = '#F9F9F9BF';
+  MegaMenuButton.style.marginTop = '-8px';
+  MegaMenuButton.style.borderRadius = '16px 16px 0 0';
+  MegaMenuButton.style.boxShadow='0px 65px 120px 0px #0000002E';
+}
+
+function hideMenu() {
+  hideTimeout = setTimeout(function() {
+    MegaMenu.classList.add('hidden');
+    MegaMenu.classList.remove('grid');
   MegaMenuButton.style.backgroundColor = '';
   MegaMenuButton.style.marginTop = '';
   MegaMenuButton.style.borderRadius = '';
   MegaMenuButton.style.boxShadow='';
+   
+  }, 50); // Delay to allow moving the cursor to the menu
 }
+
+MegaMenuButton.onmouseover = showMenu;
+MegaMenuButton.onmouseleave = hideMenu;
+MegaMenu.onmouseover = function() {
+  clearTimeout(hideTimeout); // Cancel the hide if the mouse is over the menu
+};
+MegaMenu.onmouseleave = hideMenu;
+// MegaMenu.onmouseleave=function() {
+//   MegaMenuButton.style.backgroundColor = '';
+//   MegaMenuButton.style.marginTop = '';
+//   MegaMenuButton.style.borderRadius = '';
+//   MegaMenuButton.style.boxShadow='';
+//   MegaMenu.style.display='hidden';
+// }
 DropdownMenuButton.onclick=function() {
   document.getElementById('dropdown-menu-opened').classList.toggle('hidden');
   document.getElementById('dropdown-menu-closed').classList.toggle('hidden');
@@ -292,7 +327,7 @@ const swiperParams5 = {
       autoplay: true,
       direction: 'horizontal',
     },
-    1250: {
+    1050: {
       slidesPerView: 1,
       spaceBetween: 0,
       allowTouchMove: true,

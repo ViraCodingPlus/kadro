@@ -352,7 +352,7 @@
           </a>
           <div
             id="mega-menu"
-            class="items-center justify-start hidden w-full lg:flex gap-7 md:w-auto md:order-1"
+            class="items-center justify-start relative hidden w-full lg:flex gap-7 md:w-auto md:order-1"
           >
             <ul
               class="flex flex-col mt-4 font-medium md:flex-row md:mt-0 md:space-x-1 rtl:space-x-reverse"
@@ -360,9 +360,7 @@
               <li class="flex justify-between">
                 <button
                   id="mega-menu-dropdown-button"
-                  data-dropdown-toggle="mega-menu-dropdown"
-                  data-dropdown-trigger="hover"
-                  data-dropdown-offset-distance="20" data-dropdown-delay="0" data-dropdown-offset-skidding="-528"
+                 
                   class="flex items-center justify-between w-full py-2 hover:bg-[#F9F9F9BF]  hover:rounded-2xl px-1 text-primary text-sm font-bold border-b  border-gray-100 hover:-mt-2 hover:border-b-0 md:w-auto p-3 hover:rounded-b-none md:border-0 md:hover:text-blue-600  hover:shadow-[0px_65px_120px_0px_#0000002E] "
                 >
                   دسته بندی خدمات
@@ -385,7 +383,7 @@
                 </button>
                 <div
                   id="mega-menu-dropdown"
-                  class="absolute z-10 grid hidden relative gap-0 grid-cols-4 text-sm min-[1450px]:min-w-[1200px] rounded-tr-none shadow-[0px_65px_120px_0px_#0000002E]  bg-[#F9F9F9BF] rounded-[31px]"
+                  class="absolute z-10 hidden right-0 top-[56px] gap-0 grid-cols-4 text-sm min-[1450px]:min-w-[1200px] rounded-tr-none shadow-[0px_65px_120px_0px_#0000002E]  bg-[#F9F9F9BF] rounded-[31px]"
                 >
                 
 
@@ -789,7 +787,7 @@
     <!-- Section 1 -->
     <section id="section_1" class="max-w-screen-xl2 mx-auto">
       <div class="flex gap-1 lg:flex-row flex-col-reverse">
-        <div class="xl:w-[55%]  w-[85%] mx-10 xl:mx-0 max-[450px]:-mt-[0]  lg:mt-32 mt-5 mb-20 justify-center relative flex">
+        <div class="lg:w-[55%]  w-[85%] mx-10 bsl:mx-auto xl:mx-auto max-[450px]:-mt-[0]  lg:mt-32 mt-5 mb-20 justify-center relative flex">
           <div id="main_frame">
             <div class="absolute sm:left-5 left-0 top-0 h-6 w-1 bg-primary"></div>
             <div class="absolute sm:left-5 left-0 top-0 h-1 w-9 bg-primary"></div>
@@ -823,9 +821,9 @@
             </div>
           </div>
         </div>
-        <div id="main-shadow" class="xl:w-[45%] md:w-[60%] w-full mx-auto xl:mx-0 xl:flex-row flex-col flex items-center justify-center xl:justify-between">
+        <div id="main-shadow" class="lg:w-[45%] md:w-[60%] w-full mx-auto lg:mx-0 lg:flex-row flex-col flex items-center justify-center xl:justify-between">
           <div id="main_carousel" class="w-5/6">
-            <swiper-container id="main_carousel_swiper" dir="ltr" direction="vertical" class="xl:h-[500px] h-[314px] mt-5" init="false">
+            <swiper-container id="main_carousel_swiper" dir="ltr" direction="vertical" class="lg:h-[500px] h-[314px] mt-5" init="false">
                   <swiper-slide class="bg-transparent">
                     <div class="relative">
                     <img
@@ -849,9 +847,9 @@
                   </swiper-slide>
             </swiper-container>
           </div>
-          <div  dir="ltr" class=" w-1/6  xl:mt-20 xl:rotate-0 rotate-90 max-[450px]:-mt-[50px]">
+          <div  dir="ltr" class=" w-1/6  lg:mt-20 lg:rotate-0 rotate-90 max-[450px]:-mt-[50px]">
             <div class="flex flex-col gap-6 items-center">
-              <div class="xl:hidden main-swiper-button-prev rotate-90 bg-white w-11 h-11 flex justify-center items-center rounded-full">
+              <div class="lg:hidden main-swiper-button-prev rotate-90 bg-white w-11 h-11 flex justify-center items-center rounded-full">
                 <svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3.47072 1.30684L1.1855 3.59206C0.794976 3.98258 0.794976 4.61575 1.1855 5.00627L3.47072 7.29149" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
                   <path d="M1.22645 4.29915L11.6996 4.29915" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
@@ -859,7 +857,7 @@
                   
               </div>
               <div id="main_carousel_dots"></div>
-              <div class="xl:hidden  main-swiper-button-next rotate-90 bg-white w-11 h-11 flex justify-center items-center rounded-full">
+              <div class="lg:hidden  main-swiper-button-next rotate-90 bg-white w-11 h-11 flex justify-center items-center rounded-full">
                 <svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M9.52928 1.30684L11.8145 3.59206C12.205 3.98258 12.205 4.61575 11.8145 5.00627L9.52928 7.29149" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
                   <path  d="M11.7735 4.29915L1.30042 4.29915" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
@@ -923,7 +921,7 @@
                   <swiper-slide class="bg-transparent">   
                     <!-- Card Info -->
                     <div
-                      class="p-4 mb-4 rounded-3xl xl:h-[313px] h-[283px] bg-white shadow-sm relative"
+                      class="p-4 mb-4 rounded-3xl xl:h-[313px] h-[283px] bsx:w-full blx:mx-10 bsl:mx-5  bg-white shadow-sm relative"
                     >
                       <div class="p-4 flex flex-col items-center justify-center ">
                         <div id="card_thumb" class="relative">
@@ -951,7 +949,7 @@
                   <swiper-slide class="bg-transparent">   
                     <!-- Card Info -->
                     <div
-                      class="p-4 mb-4 rounded-3xl xl:h-[313px] h-[283px] bg-white shadow-sm relative"
+                      class="p-4 mb-4 rounded-3xl xl:h-[313px] bsx:w-full blx:mx-10 bsl:mx-5 h-[283px] bg-white shadow-sm relative"
                     >
                       <div class="p-4 flex flex-col items-center justify-center ">
                         <div id="card_thumb" class="relative">
@@ -979,7 +977,7 @@
                   <swiper-slide class="bg-transparent">   
                     <!-- Card Info -->
                     <div
-                      class="p-4 mb-4 rounded-3xl xl:h-[313px] h-[283px] bg-white shadow-sm relative"
+                      class="p-4 mb-4 rounded-3xl xl:h-[313px] bsx:w-full blx:mx-10 bsl:mx-5 h-[283px] bg-white shadow-sm relative"
                     >
                       <div class="p-4 flex flex-col items-center justify-center ">
                         <div id="card_thumb" class="relative">
@@ -1074,7 +1072,7 @@
 
    <!-- Section 4 -->
    <section id="section_4" class="w-full mx-auto my-16 relative">
-    <ul class="gap-4 xl:flex hidden justify-center items-center flex-wrap w-full" id="default-styled-tab" data-tabs-toggle="#default-styled-tab-content" data-tabs-active-classes="py-2 px-4 text-white dark:text-white hover:bg-primary font-medium text-sm md:px-5 md:py-2.5 dark:hover:bg-gray-700 min-w-32 text-center shadow-[0px_22px_57px_0px_#418CFE2B] bg-primary rounded-[17px] rounded-br-none" data-tabs-inactive-classes="text-[#323232] text-base py-4 px-4" role="tablist">
+    <ul class="gap-4 lg:flex hidden justify-center items-center flex-wrap w-full" id="default-styled-tab" data-tabs-toggle="#default-styled-tab-content" data-tabs-active-classes="py-2 px-4 text-white dark:text-white hover:bg-primary font-medium text-sm md:px-5 md:py-2.5 dark:hover:bg-gray-700 min-w-32 text-center shadow-[0px_22px_57px_0px_#418CFE2B] bg-primary rounded-[17px] rounded-br-none" data-tabs-inactive-classes="text-[#323232] text-base py-4 px-4" role="tablist">
       <li class="" role="presentation">
         <button id="commercial-styled-tab" data-tabs-target="#styled-commercial" type="button" role="tab" aria-controls="commercial" aria-selected="false">عکاسی اداری و تجاری</button>
       </li>
@@ -1097,7 +1095,7 @@
       </li>
     </ul>
     <div class="mx-10">
-      <select id="default-styled-select" class="xl:hidden flex bg-gray-50 border border-gray-100 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  data-tabs-toggle="#default-styled-tab-content" data-tabs-active-classes="bg-primary data-tabs-inactive-classes="" role="tablist">
+      <select id="default-styled-select" class="lg:hidden flex bg-gray-50 border border-gray-100 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  data-tabs-toggle="#default-styled-tab-content" data-tabs-active-classes="bg-primary data-tabs-inactive-classes="" role="tablist">
         <option value="commercial" id="commercial-styled-tab" data-tabs-target="#styled-commercial"  role="tab" aria-controls="commercial" aria-selected="false">عکاسی اداری و تجاری</option>
         <option value="ceremony" id="ceremony-styled-tab" data-tabs-target="#styled-ceremony"  role="tab" aria-controls="ceremony" aria-selected="false">خدمات مراسم</option>
         <option value="advertising" id="advertising-styled-tab" data-tabs-target="#styled-advertising"  role="tab" aria-controls="advertising" aria-selected="false">عکاسی تبلیغاتی</option>
@@ -1112,11 +1110,11 @@
     <div class="absolute top-[320px] left-0 xl:flex hidden">
       <img src="./img/Toplogy-3.svg" alt="" />
     </div>
-    <div class="max-w-screen-xl mx-auto mt-10" >
+    <div class="max-w-screen-xl mx-auto mt-10 bsx:mx-2" >
       <div id="default-styled-tab-content">
         <div class="hidden" id="styled-commercial" role="tabpanel" aria-labelledby="commercial-tab">
-          <div class="grid grid-cols-1 xl:grid-cols-3 md:grid-cols-2 gap-6 mx-2 xl:mx-0">
-            <div class="grid xl:gap-1 gap-3 h-full">
+          <div class="grid grid-cols-1 lg:grid-cols-3 bsl:grid-cols-2 gap-6 mx-2 lg:mx-0">
+            <div class="grid lg:gap-1 gap-3 h-full">
               <div class="relative h-fit">
                 <img
                   class="h-auto max-w-full rounded-3xl"
@@ -1248,8 +1246,8 @@
                 </div>
               </div>
             </div>
-            <div class="grid xl:gap-1 gap-3 h-full">
-              <div class="relative h-fit">
+            <div class="grid bsl:col-span-2 lg:gap-1 bsl:grid-cols-2 grid-cols-1 gap-3 h-full">
+              <div class="col-span-1 relative h-fit">
                 <img
                   class="h-auto max-w-full rounded-3xl"
                   src="./img/238a99d476af2ca40a5a80192e3226b6.jfif"
@@ -1292,7 +1290,7 @@
                   </div>
                 </div>
               </div>
-              <div class="grid grid-cols-2 gap-2">
+              <div class="col-span-1 grid grid-cols-2 gap-2">
                 <div class="relative h-fit">
                   <img
                     class="h-auto max-w-full rounded-3xl"
@@ -1380,8 +1378,8 @@
           </div>
       </div>
       <div class="hidden" id="styled-ceremony" role="tabpanel" aria-labelledby="ceremony-tab">
-        <div class="grid grid-cols-1 xl:grid-cols-3 md:grid-cols-2 gap-6 mx-2 xl:mx-0">
-          <div class="grid xl:gap-1 gap-3 h-full">
+        <div class="grid grid-cols-1 xl:grid-cols-3 bsl:grid-cols-2 gap-6 mx-2 xl:mx-0">
+          <div class="grid lg:gap-1 gap-3 h-full">
             <div class="relative h-fit">
               <img
                 class="h-auto max-w-full rounded-3xl"
@@ -1902,35 +1900,35 @@
       </div>
     
       <div class="max-w-screen-xl mx-auto  mt-10">
-        <div class="grid xl:grid-cols-2 grid-cols-1 gap-8 xl:gap-10">
+        <div class="grid lg:grid-cols-2 grid-cols-1 gap-8 lg:gap-8">
          
-          <div class="col-span-1 relative">
+          <div class="col-span-1 relative sm:min-h-[500px]">
             <div class="absolute -right-14 top-5 z-10 xl:flex hidden">
               <img src="./img/round_cube_1.svg" alt="">
             </div>
             <div class="absolute -left-5 bottom-0 z-10 xl:flex hidden">
               <img src="./img/round_cube_2.svg" alt="">
             </div>
-            <div class="text-[30px] text-[#323232] font-bold xl:hidden mb-6 w-full text-center">ویژگی های کادرو</div>
-            <div class="grid grid-cols-2 auto-cols-auto items-center mx-8 xl:mx-0 gap-6 h-auto">
-              <div class="col-span-1 grid  h-full">
+            <div class="text-[30px] text-[#323232] font-bold lg:hidden  w-full text-center">ویژگی های کادرو</div>
+            <div class="grid grid-cols-2 auto-cols-auto items-center mx-8 xl:mx-0 gap-6 h-full">
+              <div class="col-span-1 grid  h-fit">
                 <div class="relative">
-                  <img class="h-auto w-full xl:w-[346px] max-w-full rounded-[32px]" src="./img/1fe591ce8a1672304251e2e12355cfc1.png" alt="">
+                  <img class="h-auto rounded-[32px]" src="./img/1fe591ce8a1672304251e2e12355cfc1.png" alt="">
                 </div>
               </div>
-              <div class="col-span-1 grid h-full gap-2 auto-rows-auto auto-cols-auto">
+              <div class="col-span-1 grid h-fit gap-2 auto-rows-auto auto-cols-auto">
                 <div class="relative">
-                  <img class="h-auto max-w-full rounded-3xl" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
+                  <img class="h-auto rounded-3xl" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
                 </div>
                 <div class="relative">
-                  <img class="h-auto w-full max-w-full rounded-3xl" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
+                  <img class="h-auto  rounded-3xl" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
                 </div>
               </div>
             </div>
           </div>
           <div class="col-span-1 mr-5">
-            <div class="text-[30px] text-[#323232] font-bold xl:flex hidden">ویژگی های کادرو</div>
-            <ul id="feature_list" class="flex-col gap-2 mt-7 xl:flex hidden">
+            <div class="text-[30px] text-[#323232] font-bold lg:flex hidden">ویژگی های کادرو</div>
+            <ul id="feature_list" class="flex-col gap-2 mt-7 lg:flex hidden">
               <li class="flex flex-row items-center w-full gap-5 active">
                   <div class="bg-primary item h-14 w-[3px]"></div>
                   <div class="flex flex-col gap-1 w-full p-4 rounded-[26px] shadow-[0px_19px_138.6px_4px_#0000000D]">
@@ -1955,7 +1953,7 @@
           </ul>
           
          <div class="mx-3">
-          <swiper-container  slidesPerView="2" centered-slides="true" loop="false"  class="mySwiper xl:hidden "  pagination="false"  
+          <swiper-container  slidesPerView="2" centered-slides="true" loop="false"  class="mySwiper lg:hidden "  pagination="false"  
           >
                   <swiper-slide class="bg-none">
                     <div class="flex flex-row items-center w-full gap-5">
@@ -1997,14 +1995,14 @@
 
     <!-- Section 7 -->
      <section id="section_7" class="w-full mx-auto relative mt-10">
-      <div class="absolute xl:flex hidden -top-32 left-0 z-[-1]">
+      <div class="absolute lg:flex hidden -top-32 left-0 z-[-1]">
         <img src="./img/Toplogy-3.svg" alt="" />
       </div>
 
         <div class="w-full flex justify-center items-center font-Morabba text-[23px]">
           اسنپ <span class="text-primary">عکاسی</span> نیستیم!
         </div>
-          <ul class="gap-4 xl:flex hidden justify-center items-center flex-wrap w-full" id="default-styled-tab2" data-tabs-toggle="#default-styled-tab-content2" data-tabs-active-classes="py-2 px-4 text-white dark:text-white hover:bg-primary font-medium text-sm md:px-5 md:py-2.5 dark:hover:bg-gray-700 min-w-32 text-center shadow-[0px_22px_57px_0px_#418CFE2B] bg-primary rounded-[17px] rounded-br-none" data-tabs-inactive-classes="text-[#323232] text-base py-4 px-4" role="tablist">
+          <ul class="gap-4 lg:flex hidden justify-center items-center flex-wrap w-full" id="default-styled-tab2" data-tabs-toggle="#default-styled-tab-content2" data-tabs-active-classes="py-2 px-4 text-white dark:text-white hover:bg-primary font-medium text-sm md:px-5 md:py-2.5 dark:hover:bg-gray-700 min-w-32 text-center shadow-[0px_22px_57px_0px_#418CFE2B] bg-primary rounded-[17px] rounded-br-none" data-tabs-inactive-classes="text-[#323232] text-base py-4 px-4" role="tablist">
       <li class="" role="presentation">
         <button id="commercial-styled-tab2" data-tabs-target="#styled-commercial2" type="button" role="tab" aria-controls="commercial2" aria-selected="false">عکاسی اداری و تجاری</button>
       </li>
@@ -2027,7 +2025,7 @@
       </li>
     </ul>
     <div class="mx-10 mt-5 xl:mt-0">
-      <select id="default-styled-select2" class="xl:hidden flex bg-gray-50 border border-gray-100 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  data-tabs-toggle="#default-styled-tab-content2" data-tabs-active-classes="bg-primary" data-tabs-inactive-classes="" role="tablist">
+      <select id="default-styled-select2" class="lg:hidden flex bg-gray-50 border border-gray-100 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  data-tabs-toggle="#default-styled-tab-content2" data-tabs-active-classes="bg-primary" data-tabs-inactive-classes="" role="tablist">
         <option value="commercial2" id="commercial-styled-tab2" data-tabs-target="#styled-commercial2"  role="tab" aria-controls="commercial2" aria-selected="false">عکاسی اداری و تجاری</option>
         <option value="ceremony2" id="ceremony-styled-tab2" data-tabs-target="#styled-ceremony2"  role="tab" aria-controls="ceremony2" aria-selected="false">خدمات مراسم</option>
         <option value="advertising2" id="advertising-styled-tab2" data-tabs-target="#styled-advertising2"  role="tab" aria-controls="advertising2" aria-selected="false">عکاسی تبلیغاتی</option>
@@ -2053,17 +2051,17 @@
                         <div class="relative h-56 overflow-hidden rounded-lg md:h-56">
                             <!-- Item 1 -->
                             <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-                              <div class="flex flex-col gap-4">
-                                <div class="flex gap-4">
+                              <div class="flex flex-col gap-4 h-full">
+                                <div class="flex gap-4 h-full">
                                     <div>
-                                        <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
+                                        <img class="h-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
                                     </div>
                                     <div>
-                                        <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
+                                        <img class="h-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
                                     </div>
                                   
                                 </div>
-                                <div class="flex gap-4">
+                                <div class="flex gap-4 h-fit">
                                     <div>
                                         <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
                                     </div>
@@ -2080,18 +2078,18 @@
                               </div>
                             </div>
                             <!-- Item 2 -->
-                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                              <div class="flex flex-col gap-4">
-                                <div class="flex gap-4">
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item="">
+                              <div class="flex flex-col gap-4 h-full">
+                                <div class="flex gap-4 h-full">
                                     <div>
-                                        <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
+                                        <img class="h-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
                                     </div>
                                     <div>
-                                        <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
+                                        <img class="h-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
                                     </div>
                                   
                                 </div>
-                                <div class="flex gap-4">
+                                <div class="flex gap-4 h-fit">
                                     <div>
                                         <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
                                     </div>
@@ -2179,17 +2177,17 @@
                         <div class="relative h-56 overflow-hidden rounded-lg md:h-56">
                             <!-- Item 1 -->
                             <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-                              <div class="flex flex-col gap-4">
-                                <div class="flex gap-4">
+                              <div class="flex flex-col gap-4 h-full">
+                                <div class="flex gap-4 h-full">
                                     <div>
-                                        <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
+                                        <img class="h-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
                                     </div>
                                     <div>
-                                        <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
+                                        <img class="h-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
                                     </div>
                                   
                                 </div>
-                                <div class="flex gap-4">
+                                <div class="flex gap-4 h-fit">
                                     <div>
                                         <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
                                     </div>
@@ -2206,18 +2204,18 @@
                               </div>
                             </div>
                             <!-- Item 2 -->
-                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                              <div class="flex flex-col gap-4">
-                                <div class="flex gap-4">
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item="">
+                              <div class="flex flex-col gap-4 h-full">
+                                <div class="flex gap-4 h-full">
                                     <div>
-                                        <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
+                                        <img class="h-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
                                     </div>
                                     <div>
-                                        <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
+                                        <img class="h-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
                                     </div>
                                   
                                 </div>
-                                <div class="flex gap-4">
+                                <div class="flex gap-4 h-fit">
                                     <div>
                                         <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
                                     </div>
@@ -2305,17 +2303,17 @@
                         <div class="relative h-56 overflow-hidden rounded-lg md:h-56">
                             <!-- Item 1 -->
                             <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-                              <div class="flex flex-col gap-4">
-                                <div class="flex gap-4">
+                              <div class="flex flex-col gap-4 h-full">
+                                <div class="flex gap-4 h-full">
                                     <div>
-                                        <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
+                                        <img class="h-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
                                     </div>
                                     <div>
-                                        <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
+                                        <img class="h-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
                                     </div>
                                   
                                 </div>
-                                <div class="flex gap-4">
+                                <div class="flex gap-4 h-fit">
                                     <div>
                                         <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
                                     </div>
@@ -2332,18 +2330,18 @@
                               </div>
                             </div>
                             <!-- Item 2 -->
-                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                              <div class="flex flex-col gap-4">
-                                <div class="flex gap-4">
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item="">
+                              <div class="flex flex-col gap-4 h-full">
+                                <div class="flex gap-4 h-full">
                                     <div>
-                                        <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
+                                        <img class="h-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
                                     </div>
                                     <div>
-                                        <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
+                                        <img class="h-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
                                     </div>
                                   
                                 </div>
-                                <div class="flex gap-4">
+                                <div class="flex gap-4 h-fit">
                                     <div>
                                         <img class="h-auto max-w-full rounded-lg" src="./img/57cf161c209c88c62d1db9c4f041071f.png" alt="">
                                     </div>
@@ -2418,6 +2416,7 @@
 
                   </div>
                   </swiper-slide>
+                 
           </swiper-container>
       </div>
       <div class="hidden" id="styled-ceremony2" role="tabpanel" aria-labelledby="ceremony-tab2">
@@ -2762,9 +2761,9 @@
         ترند ترین <span class="text-primary">ژست</span> های عکاسی
         </div>
         <div class="xl:mx-0 mx-5">
-          <div class="w-full mx-auto mt-10 grid grid-cols-1 xl:grid-cols-2 gap-5">
+          <div class="w-full mx-auto mt-10 grid rid-cols-1 lg:grid-cols-2 gap-5">
             <div class="col-span-1 xl:order-1 order-2">
-                <div class="grid grid-cols-2 gap-5">
+                <div class="grid lg:grid-cols-2 gap-5">
                     <div class="col-span-1 relative h-fit">
                         <div class="absolute inset-0 rounded-[30px] gallery_shadow2"></div>
                         <div class="absolute right-5 xl:bottom-16 bottom-5 xl:text-[20px] text-[15px] font-bold text-white">ژست عکس مادر پسر</div>
