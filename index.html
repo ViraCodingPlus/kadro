@@ -7,7 +7,7 @@
      <link rel="stylesheet" href="./css/swiper-bundle.min.css">
     <link href="./css/output.css" rel="stylesheet" />
   </head>
-  <body class="font-Kalameh bg-slate-50 relative max-w-screen-2xl mx-auto">
+  <body class="font-Kalameh bg-slate-50 relative 2xl:max-w-screen-2xl mx-auto">
     <div id="ellipsis_main_1"></div>
     <svg
       width="310"
@@ -109,7 +109,7 @@
           >
             <img src="./img/logo.png" class="h-12" alt="Kadro Logo" />
           </a>
-          <div class="h-[calc(100%-8rem)] overflow-y-auto">
+          <div class="h-[calc(100%-8rem)] overflow-y-auto justify-between flex flex-col">
             <ul class="mx-4 space-y-2 font-medium mt-5">
                 <li>
                   <button type="button" class="flex items-center justify-between w-full p-2 text-base" aria-controls="dropdown-menu" id="dropdown-menu-button" data-collapse-toggle="dropdown-menu">
@@ -822,32 +822,189 @@
           </div>
         </div>
         <div id="main-shadow" class="lg:w-[45%] md:w-[60%] w-full mx-auto lg:mx-0 lg:flex-row flex-col flex items-center justify-center xl:justify-between">
-          <div id="main_carousel" class="w-5/6">
-            <swiper-container id="main_carousel_swiper" dir="ltr" direction="vertical" class="lg:h-[500px] h-[314px] mt-5" init="false">
-                  <swiper-slide class="bg-transparent">
-                    <div class="relative">
-                    <img
-                      src="./img/mains.png"
-                      class="w-full max-w-[400px] sm:max-w-full"
-                      alt=""
-                      srcset="" 
+          <div id="main_carousel" class="w-5/6 btm:w-full">
+            <swiper-container id="main_carousel_swiper" dir="ltr" direction="vertical" class="lg:h-[500px]  mt-5" init="false">
+                  <swiper-slide class="bg-transparent relative">
+                    <div
+                    class="main_carousel_text absolute bg-white rounded-[17px]  z-10 top-[33%] sm:top-[33%] flex xl:right-0 -right-[15%] items-center px-4 py-2 blx:right-[20px] sm:p-2 shadow-md btm:scale-[0.9] btm:right-0 blx:scale-[0.7]" dir="rtl"
+                  >
+                    <svg
+                      width="24"
+                      class="bg-[#FFC70121] w-7 h-7 sm:h-10 sm:w-10 rounded-md p-2"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M14.1263 3H16.9516C17.5589 3 18.1373 3.263 18.5408 3.72267L21.4629 7.05149C22.141 7.82402 22.1814 8.9755 21.559 9.79476L13.6854 20.1597C12.8342 21.2801 11.1658 21.2801 10.3146 20.1597L2.44095 9.79476C1.81861 8.9755 1.85896 7.82402 2.53709 7.05149L5.45918 3.72267C5.86269 3.263 6.44106 3 7.04842 3H10.1099M14.1263 3L16.2526 8.38285M14.1263 3H10.1099M16.2526 8.38285H21.5684M16.2526 8.38285L12 20.7634L7.74736 8.38285M16.2526 8.38285H7.74736M10.1099 3L7.74736 8.38285M2.43156 8.38285H7.74736"
+                        stroke="#FFC701"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
                       />
-                    </div>
-                  </swiper-slide>
-                  <swiper-slide class="bg-transparent">
-                    <div class="relative">
+                    </svg>
+                  <div class="flex flex-col font-YekanBakh px-3">
+                    <span class="text-mainCarouselText font-bold  text-[12px]">
+                      امتیاز عکاس
+                    </span>
+                    <span class="text-[#8E8E8E] sm:leading-4 sm:text-[11px] text-[7px] leading-2"> 4.5 </span>
+                  </div>
+                  </div>
+                  <div
+                    class="main_carousel_text absolute bg-white rounded-[17px] z-10 btm:top-[19%] top-[29%] sm:top-1/4 flex items-center btm:left-0 lg:-left-[2%]  px-4 py-2 sm:p-2 shadow-md lg:scale-[0.82] blx:scale-[0.7] btm:scale-[0.8] blx:-left-[6%]"
+                    dir="rtl"
+                  >
                     <img
-                      src="./img/mains.png"
-                      class="w-full max-w-[400px] sm:max-w-full"
+                      src="./img/6e623a4a22aa9ff41eda4a4cdcfdde28.png"
+                      class="bg-[#FFC70121] sm:h-10 w-7 sm:w-10 h-7 rounded-full border-2 border-[#048AFF]"
                       alt=""
-                      srcset="" 
-                      
-                      />
+                      srcset=""
+                    />
+    
+                    <div class="flex flex-col font-YekanBakh px-1">
+                      <span class="text-mainCarouselText font-bold text-[12px]">
+                        همه چی عالی بود
+                      </span>
+                      <span
+                        class="text-[#8E8E8E] sm:max-w-[148px] max-w-[85px] sm:leading-4 sm:text-[11px] text-[7px] leading-2"
+                      >
+                        بهترین پلتفرمی که میتونستم پیدا کنم همین سایت بود
+                      </span>
                     </div>
+                  </div>
+                  <div
+                    class="main_carousel_text bg-white rounded-[17px] blx:scale-[0.7] right-0 absolute z-10 bottom-10 shadow-md flex items-center p-2 btm:scale-[0.8] btm:bottom-12"
+                    dir="rtl"
+                  >
+                    <svg
+                      width="24"
+                      height="24"
+                      class="bg-[#00FF1A21] h-10 w-10 rounded-full p-2"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M12 22C15.375 22 21 15.7981 21 10.8889C21 5.97969 16.9706 2 12 2C7.02944 2 3 5.97969 3 10.8889C3 15.7981 8.625 22 12 22ZM12 14C13.6569 14 15 12.6569 15 11C15 9.34315 13.6569 8 12 8C10.3431 8 9 9.34315 9 11C9 12.6569 10.3431 14 12 14Z"
+                        fill="#1FAB2D"
+                      />
+                    </svg>
+    
+                    <div class="flex flex-col font-YekanBakh px-3">
+                      <span class="text-mainCarouselText font-bold text-sm">
+                        شهر
+                      </span>
+                      <span
+                        class="text-[#8E8E8E] max-w-[148px] font-semibold text-[11px] leading-4"
+                      >
+                        تهران ، پاسداران
+                      </span>
+                    </div>
+                  </div>
+                  <img
+                    src="./img/920644df825495584e04a1de1e371875.png"
+                    class="w-full btm:-mt-[48px]"
+                    alt=""
+                    srcset=""
+                  />
                   </swiper-slide>
+                  <swiper-slide class="bg-transparent relative">
+                    <div
+                    class="main_carousel_text absolute bg-white rounded-[17px]  z-10 top-[33%] sm:top-[33%] flex xl:right-0 -right-[15%] items-center px-4 py-2 blx:right-[20px] sm:p-2 shadow-md btm:scale-[0.9] btm:right-0 blx:scale-[0.7]" dir="rtl"
+                  >
+                    <svg
+                      width="24"
+                      class="bg-[#FFC70121] w-7 h-7 sm:h-10 sm:w-10 rounded-md p-2"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M14.1263 3H16.9516C17.5589 3 18.1373 3.263 18.5408 3.72267L21.4629 7.05149C22.141 7.82402 22.1814 8.9755 21.559 9.79476L13.6854 20.1597C12.8342 21.2801 11.1658 21.2801 10.3146 20.1597L2.44095 9.79476C1.81861 8.9755 1.85896 7.82402 2.53709 7.05149L5.45918 3.72267C5.86269 3.263 6.44106 3 7.04842 3H10.1099M14.1263 3L16.2526 8.38285M14.1263 3H10.1099M16.2526 8.38285H21.5684M16.2526 8.38285L12 20.7634L7.74736 8.38285M16.2526 8.38285H7.74736M10.1099 3L7.74736 8.38285M2.43156 8.38285H7.74736"
+                        stroke="#FFC701"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  <div class="flex flex-col font-YekanBakh px-3">
+                    <span class="text-mainCarouselText font-bold  text-[12px]">
+                      امتیاز عکاس
+                    </span>
+                    <span class="text-[#8E8E8E] sm:leading-4 sm:text-[11px] text-[7px] leading-2"> 4.5 </span>
+                  </div>
+                  </div>
+                  <div
+                    class="main_carousel_text absolute bg-white rounded-[17px] z-10 btm:top-[19%] top-[29%] sm:top-1/4 flex items-center btm:left-0 lg:-left-[2%]  px-4 py-2 sm:p-2 shadow-md lg:scale-[0.82] blx:scale-[0.7] btm:scale-[0.8] blx:-left-[6%]"
+                    dir="rtl"
+                  >
+                    <img
+                      src="./img/6e623a4a22aa9ff41eda4a4cdcfdde28.png"
+                      class="bg-[#FFC70121] sm:h-10 w-7 sm:w-10 h-7 rounded-full border-2 border-[#048AFF]"
+                      alt=""
+                      srcset=""
+                    />
+    
+                    <div class="flex flex-col font-YekanBakh px-1">
+                      <span class="text-mainCarouselText font-bold text-[12px]">
+                        همه چی عالی بود
+                      </span>
+                      <span
+                        class="text-[#8E8E8E] sm:max-w-[148px] max-w-[85px] sm:leading-4 sm:text-[11px] text-[7px] leading-2"
+                      >
+                        بهترین پلتفرمی که میتونستم پیدا کنم همین سایت بود
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="main_carousel_text bg-white rounded-[17px] blx:scale-[0.7] right-0 absolute z-10 bottom-10 shadow-md flex items-center p-2 btm:scale-[0.8] btm:bottom-12"
+                    dir="rtl"
+                  >
+                    <svg
+                      width="24"
+                      height="24"
+                      class="bg-[#00FF1A21] h-10 w-10 rounded-full p-2"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M12 22C15.375 22 21 15.7981 21 10.8889C21 5.97969 16.9706 2 12 2C7.02944 2 3 5.97969 3 10.8889C3 15.7981 8.625 22 12 22ZM12 14C13.6569 14 15 12.6569 15 11C15 9.34315 13.6569 8 12 8C10.3431 8 9 9.34315 9 11C9 12.6569 10.3431 14 12 14Z"
+                        fill="#1FAB2D"
+                      />
+                    </svg>
+    
+                    <div class="flex flex-col font-YekanBakh px-3">
+                      <span class="text-mainCarouselText font-bold text-sm">
+                        شهر
+                      </span>
+                      <span
+                        class="text-[#8E8E8E] max-w-[148px] font-semibold text-[11px] leading-4"
+                      >
+                        تهران ، پاسداران
+                      </span>
+                    </div>
+                  </div>
+                  <img
+                    src="./img/920644df825495584e04a1de1e371875.png"
+                    class="w-full btm:-mt-[48px]"
+                    alt=""
+                    srcset=""
+                  />
+                  </swiper-slide>
+               
+                 
+              
+               
             </swiper-container>
           </div>
-          <div  dir="ltr" class=" w-1/6  lg:mt-20 lg:rotate-0 rotate-90 max-[450px]:-mt-[50px]">
+          <div  dir="ltr" class=" w-1/6  btm:-mt-[88px] lg:mt-20 lg:rotate-0 rotate-90 ">
             <div class="flex flex-col gap-6 items-center">
               <div class="lg:hidden main-swiper-button-prev rotate-90 bg-white w-11 h-11 flex justify-center items-center rounded-full">
                 <svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -874,7 +1031,7 @@
 
     <!-- Section 2 -->
     <section id="section_2" class="relative">
-      <div class="absolute right-0 -top-32 hidden xl:flex">
+      <div class="absolute right-0 -top-32 hidden xl:flex animate-float">
         <img src="./img/cube.svg" alt="" />
       </div>
       <div class="max-w-screen-xl mx-auto xl:-mt-10 mt-10">
@@ -1113,8 +1270,8 @@
     <div class="max-w-screen-xl mx-auto mt-10 bsx:mx-2" >
       <div id="default-styled-tab-content">
         <div class="hidden" id="styled-commercial" role="tabpanel" aria-labelledby="commercial-tab">
-          <div class="grid grid-cols-1 lg:grid-cols-3 bsl:grid-cols-2 gap-6 mx-2 lg:mx-0">
-            <div class="grid lg:gap-1 gap-3 h-full">
+          <div class="grid grid-cols-1 lg:grid-cols-3 bsl:grid-cols-2 gap-6 mx-2 lg:mx-0 auto-cols-max">
+            <div class="grid lg:gap-1 gap-3 h-full place-content-between">
               <div class="relative h-fit">
                 <img
                   class="h-auto max-w-full rounded-3xl"
@@ -1159,45 +1316,86 @@
                 </div>
               </div>
     
-              <div class="relative h-fit">
-                <img
-                  class="h-auto max-w-full rounded-3xl"
-                  src="./img/918a8a0607c123fd6d019ca929a8436e.jfif"
-                  alt=""
-                />
-                <div
-                  class="absolute inset-0 rounded-3xl gallery_shadow"
-                ></div>
-                <div class="absolute xl:bottom-16 bottom-8 left-0 right-10">
-                  <div class="text-white font-bold text-xl mr-2">
-                    عکـــاسی پرتره
-                  </div>
-                  <div class="flex justify-between mt-5 items-center">
-                    <div class="flex gap-2 items-center">
-                      <div class="bg-primary rotate-45 w-2 h-2">
-                        <svg
-                          width="8"
-                          height="8"
-                          viewBox="0 0 8 8"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <rect
-                            x="-0.242676"
-                            y="4"
-                            width="6"
-                            height="6"
-                            rx="2"
-                            transform="rotate(-45 -0.242676 4)"
-                            fill="#0986FD"
-                          />
-                        </svg>
+              <div class="col-span-1 grid grid-cols-2 gap-2">
+                <div class="relative h-fit">
+                  <img
+                    class="h-auto max-w-full rounded-3xl"
+                    src="./img/c75c2fbe31dd7a1dc6d704c78704dad0.jfif"
+                    alt=""
+                  />
+                  <div
+                    class="absolute inset-0 rounded-3xl gallery_shadow"
+                  ></div>
+                  <div class="absolute xl:bottom-14 bottom-7 left-0 right-5">
+                    <div class="text-white font-bold text-xl">عکـــاسی پرتره</div>
+                    <div class="flex flex-col mt-5 items-start">
+                      <div class="flex gap-2 items-center">
+                        <div class="bg-primary rotate-45 w-2 h-2">
+                          <svg
+                            width="8"
+                            height="8"
+                            viewBox="0 0 8 8"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <rect
+                              x="-0.242676"
+                              y="4"
+                              width="6"
+                              height="6"
+                              rx="2"
+                              transform="rotate(-45 -0.242676 4)"
+                              fill="#0986FD"
+                            />
+                          </svg>
+                        </div>
+                        <div class="text-base text-white">شروع قیمت از :</div>
                       </div>
-                      <div class="text-base text-white">شروع قیمت از :</div>
+                      <div class="flex gap-2">
+                        <div class="text-[#64BE0A]">750.000</div>
+                        <div class="text-white">تومان</div>
+                      </div>
                     </div>
-                    <div class="flex gap-2 ml-5">
-                      <div class="text-[#64BE0A]">750.000</div>
-                      <div class="text-white">تومان</div>
+                  </div>
+                </div>
+                <div class="relative h-fit">
+                  <img
+                    class="h-auto max-w-full rounded-3xl"
+                    src="./img/b26ee1be6cbd1a9abe0364da119e7445.jfif"
+                    alt=""
+                  />
+                  <div
+                    class="absolute inset-0 rounded-3xl gallery_shadow"
+                  ></div>
+                  <div class="absolute xl:bottom-14 bottom-7 left-0 right-5">
+                    <div class="text-white font-bold text-xl">عکـــاسی پرتره</div>
+                    <div class="flex flex-col mt-5 items-start">
+                      <div class="flex gap-2 items-center">
+                        <div class="bg-primary rotate-45 w-2 h-2">
+                          <svg
+                            width="8"
+                            height="8"
+                            viewBox="0 0 8 8"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <rect
+                              x="-0.242676"
+                              y="4"
+                              width="6"
+                              height="6"
+                              rx="2"
+                              transform="rotate(-45 -0.242676 4)"
+                              fill="#0986FD"
+                            />
+                          </svg>
+                        </div>
+                        <div class="text-base text-white">شروع قیمت از :</div>
+                      </div>
+                      <div class="flex gap-2">
+                        <div class="text-[#64BE0A]">750.000</div>
+                        <div class="text-white">تومان</div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1246,7 +1444,7 @@
                 </div>
               </div>
             </div>
-            <div class="grid bsl:col-span-2 lg:gap-1 bsl:grid-cols-2 grid-cols-1 gap-3 h-full">
+            <div class="grid bsl:col-span-2 lg:gap-1 bsl:grid-cols-2 grid-cols-1 gap-3 place-content-between h-full">
               <div class="col-span-1 relative h-fit">
                 <img
                   class="h-auto max-w-full rounded-3xl"
@@ -1606,13 +1804,13 @@
                             ></div>
                             <div class="absolute top-6 z-10 flex  w-full justify-between mx-2 ">
                               <div
-                                class="xl:mr-12 mr-3 bg-[#FF0000] text-white font-Iransansdnf xl:text-base text-xs rounded-[13px] xl:p-2 p-2 xl:px-4"
+                                class="xl:mr-12 mr-3 bg-[#FF0000] text-white flex justify-center items-center font-Iransansdnf xl:text-sm text-xs rounded-[13px] xl:p-2 p-2 xl:px-4"
                               >
                                 31%
                               </div>
                               <div class="flex gap-1 items-center mr-3 ">
                               
-                                <div class="text-white font-Iransansdnf xl:text-base text-[10px]">تخفیف عکاس</div>
+                                <div class="text-white font-Iransansdnf xl:text-sm text-base">تخفیف عکاس</div>
                                 <div class="bg-[#FFEBEB]  p-1.5 xl:w-8 xl:h-8 h-7 w-7 rounded-full">
                                   <svg
                                   class="xl:w-[19px] xl:h-[19px] h-[15px] w-[15px]"
@@ -1675,7 +1873,7 @@
                                 class="bg-[#0986FD14] rounded-[17px] flex gap-2 items-center p-2 px-4"
                               >
                               
-                                <span class="text-[#1E1E1E] text-sm"
+                                <span class="text-[#1E1E1E] font-bold text-[11px]"
                                   >ظرفیت باقی مانده</span
                                 >
                                 <span class="text-primary">24</span>
@@ -1683,7 +1881,7 @@
                                 <div
                                   class="bg-[#0986FD14] rounded-[17px] flex gap-2 items-center p-2 px-4"
                                 >
-                                <span class="text-[#1E1E1E] text-sm">روز</span>
+                                <span class="text-[#1E1E1E] font-bold text-[11px]">روز</span>
                                   <span class="text-primary">24</span>
                                   
                                 </div>
@@ -1701,13 +1899,13 @@
                             ></div>
                             <div class="absolute top-6 z-10 flex  w-full justify-between mx-2 ">
                               <div
-                                class="xl:mr-12 mr-3 bg-[#FF0000] text-white font-Iransansdnf xl:text-base text-xs rounded-[13px] xl:p-2 p-2 xl:px-4"
+                                class="xl:mr-12 mr-3 bg-[#FF0000] text-white flex justify-center items-center font-Iransansdnf xl:text-sm text-xs rounded-[13px] xl:p-2 p-2 xl:px-4"
                               >
                                 31%
                               </div>
                               <div class="flex gap-1 items-center mr-3 ">
                               
-                                <div class="text-white font-Iransansdnf xl:text-base text-[10px]">تخفیف عکاس</div>
+                                <div class="text-white font-Iransansdnf xl:text-sm text-base">تخفیف عکاس</div>
                                 <div class="bg-[#FFEBEB]  p-1.5 xl:w-8 xl:h-8 h-7 w-7 rounded-full">
                                   <svg
                                   class="xl:w-[19px] xl:h-[19px] h-[15px] w-[15px]"
@@ -1770,7 +1968,7 @@
                                 class="bg-[#0986FD14] rounded-[17px] flex gap-2 items-center p-2 px-4"
                               >
                               
-                                <span class="text-[#1E1E1E] text-sm"
+                                <span class="text-[#1E1E1E] font-bold text-[11px]"
                                   >ظرفیت باقی مانده</span
                                 >
                                 <span class="text-primary">24</span>
@@ -1778,7 +1976,7 @@
                                 <div
                                   class="bg-[#0986FD14] rounded-[17px] flex gap-2 items-center p-2 px-4"
                                 >
-                                <span class="text-[#1E1E1E] text-sm">روز</span>
+                                <span class="text-[#1E1E1E] font-bold text-[11px]">روز</span>
                                   <span class="text-primary">24</span>
                                   
                                 </div>
@@ -1796,13 +1994,13 @@
                             ></div>
                             <div class="absolute top-6 z-10 flex  w-full justify-between mx-2 ">
                               <div
-                                class="xl:mr-12 mr-3 bg-[#FF0000] text-white font-Iransansdnf xl:text-base text-xs rounded-[13px] xl:p-2 p-2 xl:px-4"
+                                class="xl:mr-12 mr-3 bg-[#FF0000] text-white flex justify-center items-center font-Iransansdnf xl:text-sm text-xs rounded-[13px] xl:p-2 p-2 xl:px-4"
                               >
                                 31%
                               </div>
                               <div class="flex gap-1 items-center mr-3 ">
                               
-                                <div class="text-white font-Iransansdnf xl:text-base text-[10px]">تخفیف عکاس</div>
+                                <div class="text-white font-Iransansdnf xl:text-sm text-base">تخفیف عکاس</div>
                                 <div class="bg-[#FFEBEB]  p-1.5 xl:w-8 xl:h-8 h-7 w-7 rounded-full">
                                   <svg
                                   class="xl:w-[19px] xl:h-[19px] h-[15px] w-[15px]"
@@ -1865,7 +2063,7 @@
                                 class="bg-[#0986FD14] rounded-[17px] flex gap-2 items-center p-2 px-4"
                               >
                               
-                                <span class="text-[#1E1E1E] text-sm"
+                                <span class="text-[#1E1E1E] font-bold text-[11px]"
                                   >ظرفیت باقی مانده</span
                                 >
                                 <span class="text-primary">24</span>
@@ -1873,7 +2071,7 @@
                                 <div
                                   class="bg-[#0986FD14] rounded-[17px] flex gap-2 items-center p-2 px-4"
                                 >
-                                <span class="text-[#1E1E1E] text-sm">روز</span>
+                                <span class="text-[#1E1E1E] font-bold text-[11px]">روز</span>
                                   <span class="text-primary">24</span>
                                   
                                 </div>
@@ -1883,6 +2081,8 @@
                           </div>
                         </div>
                     </swiper-slide>
+                 
+                  
                    
                     
                    
@@ -1903,10 +2103,10 @@
         <div class="grid lg:grid-cols-2 grid-cols-1 gap-8 lg:gap-8">
          
           <div class="col-span-1 relative sm:min-h-[500px]">
-            <div class="absolute -right-14 top-5 z-10 xl:flex hidden">
+            <div class="absolute -right-14 top-5 z-10 xl:flex hidden animate-float">
               <img src="./img/round_cube_1.svg" alt="">
             </div>
-            <div class="absolute -left-5 bottom-0 z-10 xl:flex hidden">
+            <div class="absolute -left-5 bottom-0 z-10 xl:flex hidden animate-float2">
               <img src="./img/round_cube_2.svg" alt="">
             </div>
             <div class="text-[30px] text-[#323232] font-bold lg:hidden  w-full text-center">ویژگی های کادرو</div>
@@ -2025,7 +2225,7 @@
       </li>
     </ul>
     <div class="mx-10 mt-5 xl:mt-0">
-      <select id="default-styled-select2" class="lg:hidden flex bg-gray-50 border border-gray-100 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  data-tabs-toggle="#default-styled-tab-content2" data-tabs-active-classes="bg-primary" data-tabs-inactive-classes="" role="tablist">
+      <select id="default-styled-select2" class="lg:hidden flex bg-gray-50 border border-gray-100 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 py-4 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  data-tabs-toggle="#default-styled-tab-content2" data-tabs-active-classes="bg-primary" data-tabs-inactive-classes="" role="tablist">
         <option value="commercial2" id="commercial-styled-tab2" data-tabs-target="#styled-commercial2"  role="tab" aria-controls="commercial2" aria-selected="false">عکاسی اداری و تجاری</option>
         <option value="ceremony2" id="ceremony-styled-tab2" data-tabs-target="#styled-ceremony2"  role="tab" aria-controls="ceremony2" aria-selected="false">خدمات مراسم</option>
         <option value="advertising2" id="advertising-styled-tab2" data-tabs-target="#styled-advertising2"  role="tab" aria-controls="advertising2" aria-selected="false">عکاسی تبلیغاتی</option>
@@ -2042,13 +2242,13 @@
 
                     
                   <div class="h-full">
-                    <div class="max-w-sm bg-white border p-2 border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <div class="max-w-sm bg-white border p-2 border-gray-200 rounded-[17px] shadow dark:bg-gray-800 dark:border-gray-700">
                       
 
 
                       <div id="custom-controls-gallery" class="relative w-full" data-carousel="static">
                         <!-- Carousel wrapper -->
-                        <div class="relative h-56 overflow-hidden rounded-lg md:h-56">
+                        <div class="relative h-56 overflow-hidden rounded-[17px] md:h-56">
                             <!-- Item 1 -->
                             <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
                               <div class="flex flex-col gap-4 h-full">
@@ -2145,8 +2345,8 @@
                           <div class="flex flex-col justify-center">
                             <div class=" font-bold text-lg">خانم حکیم زاده</div>
                             <div class="mb-2 text-[#888ABD]">تهران، محدوده ازگل</div>
-                            <div class="flex gap-2">
-                              <div class="bg-[#FF9900] opacity-50 w-5 h-5 rounded-full"></div>
+                            <div class="flex gap-2 items-center">
+                              <div class="bg-[#FF9900] opacity-50 btm:w-2 btm:h-2 w-5 h-5 rounded-full"></div>
                               <div class="text-xs text-[#FF9900]">فوق حرفه ای پرو</div>
                             </div>
                           </div>
@@ -2168,13 +2368,13 @@
 
                     
                   <div class="h-full">
-                    <div class="max-w-sm bg-white border p-2 border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <div class="max-w-sm bg-white border p-2 border-gray-200 rounded-[17px] shadow dark:bg-gray-800 dark:border-gray-700">
                       
 
 
                       <div id="custom-controls-gallery" class="relative w-full" data-carousel="static">
                         <!-- Carousel wrapper -->
-                        <div class="relative h-56 overflow-hidden rounded-lg md:h-56">
+                        <div class="relative h-56 overflow-hidden rounded-[17px] md:h-56">
                             <!-- Item 1 -->
                             <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
                               <div class="flex flex-col gap-4 h-full">
@@ -2271,8 +2471,8 @@
                           <div class="flex flex-col justify-center">
                             <div class=" font-bold text-lg">خانم حکیم زاده</div>
                             <div class="mb-2 text-[#888ABD]">تهران، محدوده ازگل</div>
-                            <div class="flex gap-2">
-                              <div class="bg-[#FF9900] opacity-50 w-5 h-5 rounded-full"></div>
+                            <div class="flex gap-2 items-center">
+                              <div class="bg-[#FF9900] opacity-50 btm:w-2 btm:h-2 w-5 h-5 rounded-full"></div>
                               <div class="text-xs text-[#FF9900]">فوق حرفه ای پرو</div>
                             </div>
                           </div>
@@ -2294,13 +2494,13 @@
 
                     
                   <div class="h-full">
-                    <div class="max-w-sm bg-white border p-2 border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <div class="max-w-sm bg-white border p-2 border-gray-200 rounded-[17px] shadow dark:bg-gray-800 dark:border-gray-700">
                       
 
 
                       <div id="custom-controls-gallery" class="relative w-full" data-carousel="static">
                         <!-- Carousel wrapper -->
-                        <div class="relative h-56 overflow-hidden rounded-lg md:h-56">
+                        <div class="relative h-56 overflow-hidden rounded-[17px] md:h-56">
                             <!-- Item 1 -->
                             <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
                               <div class="flex flex-col gap-4 h-full">
@@ -2397,8 +2597,8 @@
                           <div class="flex flex-col justify-center">
                             <div class=" font-bold text-lg">خانم حکیم زاده</div>
                             <div class="mb-2 text-[#888ABD]">تهران، محدوده ازگل</div>
-                            <div class="flex gap-2">
-                              <div class="bg-[#FF9900] opacity-50 w-5 h-5 rounded-full"></div>
+                            <div class="flex gap-2 items-center">
+                              <div class="bg-[#FF9900] opacity-50 btm:w-2 btm:h-2 w-5 h-5 rounded-full"></div>
                               <div class="text-xs text-[#FF9900]">فوق حرفه ای پرو</div>
                             </div>
                           </div>
@@ -2416,6 +2616,7 @@
 
                   </div>
                   </swiper-slide>
+                 
                  
           </swiper-container>
       </div>
@@ -2812,7 +3013,7 @@
       <div class="relative w-full xl:h-80">
         <div class="footer_content_bg  w-full h-full">
             <div class="relative z-10">
-                <div class="grid xl:grid-cols-7 grid-cols-2 max-w-screen-2xl pl gap-5 mx-14">
+                <div class="grid xl:grid-cols-7 grid-cols-2 2xl:max-w-screen-2xl pl gap-5 mx-14">
                   <div class="col-span-2">
                     <img src="./img/708ff6eba17dea7c912a2315b8d56fd2.png" class="w-24 h-auto" alt="">
                     <div class="mt-1 leading-[29px] text-[#80888F]">
@@ -3013,7 +3214,7 @@
             </div>
         </div>
     </div>
-    <div class="h-16 my-5 xl:mt-0 flex-col xl:flex-row max-w-screen-2xl gap-3 xl:mx-28 mx-20 flex xl:justify-between justify-center items-center">
+    <div class="h-16 my-5 xl:mt-0 flex-col xl:flex-row 2xl:max-w-screen-2xl gap-3 xl:mx-28 mx-20 flex xl:justify-between justify-center items-center">
       <div>تمامی حقوق سایت محفوظ است .</div>
       <ul class="flex gap-5 h-full items-center flex-row-reverse">
         <li class="bg-[#F00073] rounded-xl w-8 h-8">
