@@ -309,6 +309,10 @@ const swiperParams4 = {
 const swiperParams5 = {
   slidesPerView: 1,
   spaceBetween: 0,
+  speed: 1000,
+  autoplay: {
+    delay: 5000,
+  },
   navigation: {
     nextEl: '.main-swiper-button-next',
     prevEl: '.main-swiper-button-prev',
@@ -324,8 +328,6 @@ const swiperParams5 = {
     340: {
       slidesPerView: 1,
       spaceBetween: 0,
-      allowTouchMove: true,
-      autoplay: true,
       direction: 'horizontal',
     },
     1050: {
