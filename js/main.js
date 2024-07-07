@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+window.onload = function() {
   // Hide the loading spinner
   var loadingSpinner = document.getElementById('loading-spinner');
   var content = document.getElementById('content');
@@ -401,4 +401,4 @@ swiperEl5.initialize();
 main_carousel_swiper.initialize();
 feature_list_items.initialize();
 document.querySelector('#main_carousel_dots .dot').classList.add('active');
-});
+};
