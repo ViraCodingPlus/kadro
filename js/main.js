@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
   var loadingSpinner = document.getElementById('loading-spinner');
   var content = document.getElementById('content');
   
-  // loadingSpinner.style.display = 'none';
-  // content.style.display = 'block';
+  loadingSpinner.style.display = 'none';
+  content.style.display = 'block';
 
 var hideTimeout;
 // Get the button
