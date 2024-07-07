@@ -1,3 +1,11 @@
+document.addEventListener('DOMContentLoaded', function() {
+  // Hide the loading spinner
+  var loadingSpinner = document.getElementById('loading-spinner');
+  var content = document.getElementById('content');
+  
+  // loadingSpinner.style.display = 'none';
+  // content.style.display = 'block';
+
 var hideTimeout;
 // Get the button
 var mybutton = document.getElementById("back-to-top");
@@ -393,3 +401,4 @@ swiperEl5.initialize();
 main_carousel_swiper.initialize();
 feature_list_items.initialize();
 document.querySelector('#main_carousel_dots .dot').classList.add('active');
+});
