@@ -1,11 +1,3 @@
-window.onload = function() {
-  // Hide the loading spinner
-  var loadingSpinner = document.getElementById('loading-spinner');
-  var content = document.getElementById('content');
-  
-  loadingSpinner.style.display = 'none';
-  content.style.display = 'block';
-
 var hideTimeout;
 // Get the button
 var mybutton = document.getElementById("back-to-top");
@@ -24,6 +16,8 @@ const feature_list_items = document.getElementById('feature_list_items');
 // mega menu element
 const MegaMenu = document.getElementById('mega-menu-dropdown');
 const MegaMenuButton = document.getElementById('mega-menu-dropdown-button');
+const NavMenuSidebar = document.getElementById('nav-menu-sidebar');
+const NavMenuContent = document.getElementById('nav-menu-content');
 
 
 // dropdown mobile menu element
@@ -35,20 +29,37 @@ window.onscroll = function() {
     scrollFunction();
 };
 MegaMenu.onmouseover=function() {
-  MegaMenuButton.style.backgroundColor = '#F9F9F9BF';
+  MegaMenuButton.style.backgroundColor = '#F9F9F9';
   MegaMenuButton.style.marginTop = '-8px';
   MegaMenuButton.style.borderRadius = '16px 16px 0 0';
   MegaMenuButton.style.boxShadow='0px 65px 120px 0px #0000002E';
 }
+const listNavItems = document.querySelectorAll('#nav-menu-sidebar li');
+
+listNavItems.forEach(item => {
+        item.addEventListener('mouseover', function () {
+          listNavItems.forEach((li)=>{
+            li.classList.remove('active');
+          })
+            // Add active class to the hovered item
+            item.classList.add('active');
+            var navSidebarIndex=item.getAttribute('data-nav');
+            if (document.querySelector('[data-nav-content="'+navSidebarIndex+'"]')) {
+              document.querySelectorAll('[data-nav-content]').forEach(el => el.classList.remove('active'));
+              document.querySelector('[data-nav-content="'+navSidebarIndex+'"]').classList.add('active')
+            }
+        });
+
+});
 
 function showMenu() {
 
   clearTimeout(hideTimeout);
   var rect = MegaMenuButton.getBoundingClientRect();
-  MegaMenu.classList.add('grid');
+  MegaMenu.classList.add('flex');
   MegaMenu.classList.remove('hidden');
-  MegaMenu.style.width = rect.left + 100 + 'px';
-  MegaMenuButton.style.backgroundColor = '#F9F9F9BF';
+  // MegaMenu.style.width = rect.left + 100 + 'px';
+  MegaMenuButton.style.backgroundColor = '#F9F9F9';
   MegaMenuButton.style.marginTop = '-8px';
   MegaMenuButton.style.borderRadius = '16px 16px 0 0';
   MegaMenuButton.style.boxShadow='0px 65px 120px 0px #0000002E';
@@ -82,15 +93,46 @@ MegaMenu.onmouseleave = hideMenu;
 DropdownMenuButton.onclick=function() {
   document.getElementById('dropdown-menu-opened').classList.toggle('hidden');
   document.getElementById('dropdown-menu-closed').classList.toggle('hidden');
-
+}
+function getChildrenIndex(ele){
+  //IE use Element.sourceIndex
+  if(ele.sourceIndex){
+      var eles = ele.parentNode.children;
+      var low = 0, high = eles.length-1, mid = 0;
+      var esi = ele.sourceIndex, nsi;
+      //use binary search algorithm
+      while (low <= high) {
+          mid = (low + high) >> 1;
+          nsi = eles[mid].sourceIndex;
+          if (nsi > esi) {
+              high = mid - 1;
+          } else if (nsi < esi) {
+              low = mid + 1;
+          } else {
+              return mid;
+          }
+      }
+  }
+  //other browsers
+  var i=0;
+  while(ele = ele.previousElementSibling){
+      i++;
+  }
+  return i;
 }
 function scrollFunction() {
     if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
         mybutton.style.display = "flex";
-        chatbutton.style.display = "flex";
+        if (chatbutton) {
+          chatbutton.style.display = "flex";
+        }
+        
     } else {
         mybutton.style.display = "none";
-        chatbutton.style.display = "none";
+        if (chatbutton) {
+          chatbutton.style.display = "none";
+        }
+        
     }
 }
 
@@ -137,13 +179,50 @@ document.getElementById('default-styled-select2').addEventListener('change', fun
       }
   });
 });
-
 // swiper parameters
 const swiperParams1 = {
   slidesPerView: 3,
   spaceBetween:1,
-//   loop:true,
+  loop:true,
   navigation:true,
+  reverseDirection: true,
+  centeredSlides:true,
+  breakpoints: {
+    340: {
+      slidesPerView: 1.8,
+      spaceBetween:10,
+      centeredSlides:true,
+    },
+    640: {
+      slidesPerView: 2.5,
+      centeredSlides:true,
+      spaceBetween:0
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween:1,
+      reverseDirection: true,
+      
+    },
+  },
+  navigation: {
+    nextEl: '#swiper-button-next',
+    prevEl: '#swiper-button-prev',
+  },
+  on: {
+    init() {
+      // Example: Set the active slide to the second slide (index 1) after initialization
+      this.slideTo(1, 0); // (slide index, transition speed in ms)
+    },
+  },
+};
+const swiperParams12 = {
+  slidesPerView: 3,
+  spaceBetween:1,
+//   loop:true,
+// direction :'rtl',
+  navigation:true,
+  
   centeredSlides:true,
   breakpoints: {
     340: {
@@ -202,7 +281,7 @@ const swiperParams2 = {
     1024: {
       slidesPerView: 4,
       spaceBetween:20,
-      centeredSlides:true,
+      // centeredSlides:true,
       
     },
     1250: {
@@ -249,19 +328,7 @@ const swiperParams3 = {
       allowTouchMove: true
       
     },
-    1024: {
-      slidesPerView: 4,
-      spaceBetween:20,
-      centeredSlides:true,
-      allowTouchMove: true
-    },
-    1250: {
-      slidesPerView: 3,
-      spaceBetween:20,
-      clickable:false,
-      allowTouchMove: false
-      
-    },
+
   },
   on: {
     init() {
@@ -279,6 +346,8 @@ const swiperParams4 = {
     340: {
       slidesPerView: 4,
       spaceBetween:10,
+      loop:true,
+      centeredSlides:true,
       allowTouchMove: true
     },
     640: {
@@ -309,7 +378,7 @@ const swiperParams4 = {
   on: {
     init() {
       // Example: Set the active slide to the second slide (index 1) after initialization
-      this.slideTo(1, 0); // (slide index, transition speed in ms)
+      this.slideTo(3, 0); // (slide index, transition speed in ms)
     },
   },
 };
@@ -318,9 +387,13 @@ const swiperParams5 = {
   slidesPerView: 1,
   spaceBetween: 0,
   speed: 1000,
+  reverseDirection: true,
   autoplay: {
     delay: 5000,
   },
+  observer: true,
+  observeParents: true,
+  observeSlideChildren: true,
   navigation: {
     nextEl: '.main-swiper-button-next',
     prevEl: '.main-swiper-button-prev',
@@ -337,16 +410,28 @@ const swiperParams5 = {
       slidesPerView: 1,
       spaceBetween: 0,
       direction: 'horizontal',
+      navigation: {
+        prevEl: '.main-swiper-button-next',
+        nextEl: '.main-swiper-button-prev',
+      },
     },
     1050: {
       slidesPerView: 1,
       spaceBetween: 0,
       allowTouchMove: true,
       direction: 'vertical',
-      navigation:false
     },
   },
   on: {
+    init: function () {
+      const bullets = document.querySelectorAll('#main_carousel_dots .dot');
+      bullets.forEach((bullet, index) => {
+        bullet.classList.remove('active');
+        if (index === this.activeIndex) {
+          bullet.classList.add('active');
+        }
+      });
+    },
     slideChange: function () {
       const bullets = document.querySelectorAll('#main_carousel_dots .dot');
       bullets.forEach((bullet, index) => {
@@ -400,5 +485,4 @@ swiperEl4.initialize();
 swiperEl5.initialize();
 main_carousel_swiper.initialize();
 feature_list_items.initialize();
-document.querySelector('#main_carousel_dots .dot').classList.add('active');
-};
+// document.querySelector('#main_carousel_dots .dot').classList.add('active');
